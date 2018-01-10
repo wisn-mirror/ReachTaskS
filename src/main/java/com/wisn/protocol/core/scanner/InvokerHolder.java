@@ -19,7 +19,6 @@ public class InvokerHolder {
     }
 
     public static Invoker getInvoker(short module, short cmd) {
-        print();
         HashMap<Short, Invoker> shortInvokerHashMap = invokers.get(module);
         if (shortInvokerHashMap == null) return null;
         return shortInvokerHashMap.get(cmd);
