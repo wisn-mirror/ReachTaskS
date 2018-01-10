@@ -1,7 +1,7 @@
 package com.wisn.protocol.core.scanner;
 
-import coder.annotion.SocketCmd;
-import coder.annotion.SocketModule;
+import com.wisn.protocol.handle.SocketCmd;
+import com.wisn.protocol.handle.SocketModule;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.lang.Nullable;
