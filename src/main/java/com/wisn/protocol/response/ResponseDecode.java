@@ -22,6 +22,9 @@ public class ResponseDecode extends ByteToMessageDecoder {
                 }
                 int readerIndex;
                 while (true) {
+                    if (byteBuf.readableBytes() < 14) {
+                        return;
+                    }
                     readerIndex = byteBuf.readerIndex();
                     byteBuf.markReaderIndex();
                     if (byteBuf.readInt() == ConstantValues.MESSAGE_HEADTAG) {

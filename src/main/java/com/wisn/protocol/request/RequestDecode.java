@@ -23,6 +23,9 @@ public class RequestDecode extends ByteToMessageDecoder {
                 }
                 int readerIndex;
                 while (true) {
+                    if (byteBuf.readableBytes() < 12) {
+                        return;
+                    }
                     readerIndex = byteBuf.readerIndex();
                     byteBuf.markReaderIndex();
                     if (byteBuf.readInt() == ConstantValues.MESSAGE_HEADTAG) {

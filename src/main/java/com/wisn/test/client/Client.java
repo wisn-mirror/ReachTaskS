@@ -26,9 +26,9 @@ public class Client {
             @Override
             protected void initChannel(SocketChannel socketChannel) throws Exception {
                 ChannelPipeline pipeline = socketChannel.pipeline();
-                pipeline.addLast(new ProtobufVarint32FrameDecoder());
+//                pipeline.addLast(new ProtobufVarint32FrameDecoder());
                 pipeline.addLast(new ResponseDecode());
-                pipeline.addLast(new ProtobufVarint32LengthFieldPrepender());
+//                pipeline.addLast(new ProtobufVarint32LengthFieldPrepender());
                 pipeline.addLast(new RequestEncoder());
                 pipeline.addLast(new  ClientHandler());
 
