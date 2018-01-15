@@ -11,7 +11,7 @@ CREATE TABLE `rtuser` (
   `registertime` bigint(13) NOT NULL COMMENT '注册时间',
   `lastlogintime` bigint(13) NOT NULL COMMENT '最后一次登录时间',
   PRIMARY KEY (`userid`)
-) ENGINE=InnoDB AUTO_INCREMENT=10000 DEFAULT CHARSET=utf8 COMMENT='用户表'
+) ENGINE=InnoDB AUTO_INCREMENT=10000 DEFAULT CHARSET=utf8 COMMENT='用户表';
 
 CREATE TABLE `rtmessage` (
   `messageid` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '消息id',
@@ -23,4 +23,4 @@ CREATE TABLE `rtmessage` (
   `createtime` bigint(13) NOT NULL COMMENT '创建时间',
   `receivetime` bigint(13) NOT NULL COMMENT '接收时间',
   PRIMARY KEY (`messageid`)
-) ENGINE=InnoDB AUTO_INCREMENT=10000 DEFAULT CHARSET=utf8 COMMENT='消息表'
+) ENGINE=InnoDB AUTO_INCREMENT=10000 DEFAULT CHARSET=utf8 COMMENT='消息表';

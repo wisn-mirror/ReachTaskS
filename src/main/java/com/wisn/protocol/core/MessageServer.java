@@ -12,8 +12,8 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.handler.codec.protobuf.ProtobufVarint32FrameDecoder;
 import io.netty.handler.codec.protobuf.ProtobufVarint32LengthFieldPrepender;
 
-public class Server {
-    public static void main(String[] args) {
+public class MessageServer {
+    public static void start(String ip,int port )  {
         ServerBootstrap bootstrap = new ServerBootstrap();
         NioEventLoopGroup bossGroup = new NioEventLoopGroup(4);
         NioEventLoopGroup workGroup = new NioEventLoopGroup(Runtime.getRuntime().availableProcessors() * 2);
@@ -24,14 +24,12 @@ public class Server {
             @Override
             protected void initChannel(SocketChannel socketChannel) throws Exception {
                 ChannelPipeline pipeline = socketChannel.pipeline();
-//                pipeline.addLast(new ProtobufVarint32FrameDecoder());
                 pipeline.addLast( new RequestDecode());
-//                pipeline.addLast(new ProtobufVarint32LengthFieldPrepender());
                 pipeline.addLast( new ResponseEncoder());
                 pipeline.addLast( businessGroup,new ServerHandler());
             }
         });
-        ChannelFuture bind = bootstrap.bind("127.0.0.1", 9999);
+        ChannelFuture bind = bootstrap.bind(ip, port);
         try {
             bind.sync();
         } catch (InterruptedException e) {
