@@ -1,7 +1,7 @@
 package com.wisn.web;
 
 
-import com.wisn.HttpResponse;
+import com.wisn.http.HttpResponse;
 import com.wisn.entity.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
