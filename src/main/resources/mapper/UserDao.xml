@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wisn.dao.UserDao">
+    <resultMap id="userMap" type="com.wisn.entity.User">
+        <id property="userid" column="userid" javaType="java.lang.Long"/>
+        <result property="nickname" column="nickname" javaType="java.lang.String"/>
+        <result property="nameid" column="nameid" javaType="java.lang.String"/>
+        <result property="iconurl" column="iconurl" javaType="java.lang.String"/>
+        <result property="password" column="password" javaType="java.lang.String"/>
+        <result property="encryption" column="encryption" javaType="java.lang.String"/>
+        <result property="phonenumber" column="phonenumber" javaType="java.lang.String"/>
+        <result property="registertime" column="registertime" javaType="java.lang.Long"/>
+    </resultMap>
+
+    <select id="queryUserById" resultType="userMap" parameterType="long">
+		SELECT
+			userid,
+			nickname,
+			nameid,
+			iconurl,
+			password,
+			encryption,
+			phonenumber,
+			registertime,
+		FROM
+			rtuser
+		WHERE
+			userid = #{userid}
+	</select>
+
+    <select id="queryAllUser" resultMap="userMap">
+		SELECT
+			userid,
+			nickname,
+			nameid,
+			iconurl,
+			password,
+			encryption,
+			phonenumber,
+			registertime
+		FROM
+			rtuser
+		ORDER BY
+			registertime
+		LIMIT #{offset}, #{limit}
+	</select>
+    <insert id="insertUser" useGeneratedKeys="true" keyProperty="userid">
+		insert into rtuser
+			(nickname,
+			nameid,
+			iconurl,
+			password,
+			encryption,
+			phonenumber,
+			registertime)
+			 values
+			 (#{nickname},
+			 #{nameid},
+			 #{iconurl},
+			 #{password},
+			 #{encryption},
+			 #{phonenumber},
+			 #{registertime})
+	</insert>
+    <update id="updateUser" parameterType="com.wisn.entity.User">
+		update rtuser set
+		nickname=#{nickname},
+		nameid=#{nameid},
+		iconurl=#{iconurl},
+		password=#{password},
+		encryption=#{encryption},
+		phonenumber=#{phonenumber},
+		registertime=#{registertime}
+		where
+		userid=#{userid}
+	</update>
+    <delete id="deleteUserByUserId" parameterType="long">
+		delete from rtuser where userid=#{userid}
+	</delete>
+</mapper>

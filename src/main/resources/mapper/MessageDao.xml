@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wisn.dao.MessageDao">
+    <resultMap id="messageMap" type="com.wisn.entity.Message">
+        <id property="messageid" column="messageid" javaType="java.lang.Long"/>
+        <result property="fromuserid" column="fromuserid" javaType="java.lang.Long"/>
+        <result property="targetuserid" column="targetuserid" javaType="java.lang.Long"/>
+        <result property="messagetype" column="messagetype" javaType="java.lang.Integer"/>
+        <result property="status" column="status" javaType="java.lang.Integer"/>
+        <result property="content" column="content" javaType="java.lang.String"/>
+        <result property="createtime" column="createtime" javaType="java.lang.Long"/>
+        <result property="receivetime" column="receivetime" javaType="java.lang.Long"/>
+    </resultMap>
+    <select id="queryMessageByMessageId" resultType="messageMap" parameterType="long">
+		SELECT
+			messageid,
+			fromuserid,
+			targetuserid,
+			messagetype,
+			status,
+			content,
+			createtime,
+			receivetime
+		FROM
+			rtmessage
+		WHERE
+			messageid = #{messageid}
+	</select>
+
+    <select id="queryMessageByTargetId" resultMap="messageMap" parameterType="long">
+		SELECT
+			messageid,
+			fromuserid,
+			targetuserid,
+			messagetype,
+			status,
+			content,
+			createtime,
+			receivetime
+		FROM
+			rtmessage
+		WHERE
+			messageid = #{messageid}
+		ORDER BY
+			createtime
+	</select>
+    <select id="queryAllMessage" resultMap="messageMap">
+		SELECT
+			messageid,
+			fromuserid,
+			targetuserid,
+			messagetype,
+			status,
+			content,
+			createtime,
+			receivetime
+		FROM
+			rtmessage
+		ORDER BY
+			createtime
+			LIMIT #{offset}, #{limit}
+	</select>
+
+    <insert id="insertMessage" useGeneratedKeys="true" keyProperty="messageid">
+		insert into rtmessage
+			( fromuserid,
+			targetuserid,
+			messagetype,
+			status,
+			content,
+			createtime,
+			receivetime)
+			 values
+			 (#{fromuserid},
+			 #{targetuserid},
+			 #{messagetype},
+			 #{status},
+			 #{content},
+			 #{createtime},
+			 #{receivetime})
+	</insert>
+
+    <update id="updateMessage" parameterType="com.wisn.entity.Message">
+		update rtmessage set
+		fromuserid=#{fromuserid},
+		targetuserid=#{targetuserid},
+		messagetype=#{messagetype},
+		status=#{status},
+		content=#{content},
+		status=#{status},
+		createtime=#{createtime},
+		receivetime=#{receivetime}
+		where
+		messageid=#{messageid}
+	</update>
+    <delete id="deleteMessageByMessageId" parameterType="long">
+		delete from rtmessage where messageid=#{messageid}
+	</delete>
+    <delete id="deleteMessageByTargetId" parameterType="long">
+		delete from rtmessage where targetuserid=#{targetuserid}
+	</delete>
+</mapper>
