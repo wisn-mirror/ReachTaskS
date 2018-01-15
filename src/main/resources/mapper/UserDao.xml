@@ -14,7 +14,7 @@
         <result property="registertime" column="registertime" javaType="java.lang.Long"/>
     </resultMap>
 
-    <select id="queryUserById" resultType="userMap" parameterType="long">
+    <select id="queryUserById"   parameterType="long">
 		SELECT
 			userid,
 			nickname,

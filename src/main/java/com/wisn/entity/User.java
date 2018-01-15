@@ -25,13 +25,18 @@ public class User {
     public User() {
     }
 
-    public User(String nickname, String nameid, String phonenumber, long registertime, long lastlogintime) {
+    public User(long userid, String nickname, String nameid, String iconurl, String password, String encryption, String phonenumber, long registertime, long lastlogintime) {
+        this.userid = userid;
         this.nickname = nickname;
         this.nameid = nameid;
+        this.iconurl = iconurl;
+        this.password = password;
+        this.encryption = encryption;
         this.phonenumber = phonenumber;
         this.registertime = registertime;
         this.lastlogintime = lastlogintime;
     }
+
 
     public long getUserid() {
         return userid;

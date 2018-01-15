@@ -13,7 +13,7 @@
         <result property="createtime" column="createtime" javaType="java.lang.Long"/>
         <result property="receivetime" column="receivetime" javaType="java.lang.Long"/>
     </resultMap>
-    <select id="queryMessageByMessageId" resultType="messageMap" parameterType="long">
+    <select id="queryMessageByMessageId"   parameterType="long">
 		SELECT
 			messageid,
 			fromuserid,
