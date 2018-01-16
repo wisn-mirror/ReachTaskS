@@ -1,4 +1,4 @@
-package com.wisn.tool;
+package com.wisn.tools;
 
 import java.io.*;
 import java.util.Iterator;

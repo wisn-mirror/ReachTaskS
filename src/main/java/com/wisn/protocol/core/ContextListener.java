@@ -1,6 +1,6 @@
 package com.wisn.protocol.core;
 
-import com.wisn.tool.PropertiesOperation;
+import com.wisn.tools.PropertiesOperation;
 
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;

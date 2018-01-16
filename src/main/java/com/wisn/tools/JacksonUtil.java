@@ -1,7 +1,14 @@
-package com.wisn.tool;
+package com.wisn.tools;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.core.JsonGenerator;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.JsonSerializer;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializerProvider;
+
+import java.io.IOException;
 
 public class JacksonUtil {
     public static ObjectMapper objectMapper;
@@ -59,6 +66,13 @@ public class JacksonUtil {
     public static String toJSon(Object object) {
         if (objectMapper == null) {
             objectMapper = new ObjectMapper();
+            objectMapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
+//            objectMapper.getSerializerProvider().setNullValueSerializer(new JsonSerializer<Object>() {
+//                @Override
+//                public void serialize(Object arg0, JsonGenerator arg1, SerializerProvider arg2) throws IOException, JsonProcessingException {
+//                    arg1.writeString("");
+//                }
+//            });
         }
 
         try {

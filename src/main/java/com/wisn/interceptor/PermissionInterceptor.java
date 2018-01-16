@@ -1,7 +1,5 @@
 package com.wisn.interceptor;
 
-import com.wisn.http.HttpResponse;
-import com.wisn.tool.JacksonUtil;
 import org.springframework.lang.Nullable;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
