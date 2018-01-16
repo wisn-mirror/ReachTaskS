@@ -13,7 +13,7 @@ import io.netty.handler.codec.protobuf.ProtobufVarint32FrameDecoder;
 import io.netty.handler.codec.protobuf.ProtobufVarint32LengthFieldPrepender;
 
 public class MessageServer {
-    public static void start(String ip,int port )  {
+    public static void start(String ip, int port) {
         ServerBootstrap bootstrap = new ServerBootstrap();
         NioEventLoopGroup bossGroup = new NioEventLoopGroup(4);
         NioEventLoopGroup workGroup = new NioEventLoopGroup(Runtime.getRuntime().availableProcessors() * 2);
@@ -24,14 +24,16 @@ public class MessageServer {
             @Override
             protected void initChannel(SocketChannel socketChannel) throws Exception {
                 ChannelPipeline pipeline = socketChannel.pipeline();
-                pipeline.addLast( new RequestDecode());
-                pipeline.addLast( new ResponseEncoder());
-                pipeline.addLast( businessGroup,new ServerHandler());
+                pipeline.addLast(new RequestDecode());
+                pipeline.addLast(new ResponseEncoder());
+                pipeline.addLast(businessGroup, new ServerHandler());
             }
         });
+        System.out.println("============MessageServer Bind===============");
         ChannelFuture bind = bootstrap.bind(ip, port);
         try {
             bind.sync();
+            System.out.println("============MessageServer Started===============");
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

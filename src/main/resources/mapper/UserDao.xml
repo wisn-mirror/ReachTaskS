@@ -12,7 +12,25 @@
         <result property="encryption" column="encryption" javaType="java.lang.String"/>
         <result property="phonenumber" column="phonenumber" javaType="java.lang.String"/>
         <result property="registertime" column="registertime" javaType="java.lang.Long"/>
+        <result property="lastlogintime" column="lastlogintime" javaType="java.lang.Long"/>
     </resultMap>
+
+	<select id="queryUserByPhoneNumber" resultMap="userMap"  >
+		SELECT
+		userid,
+		nickname,
+		nameid,
+		iconurl,
+		password,
+		encryption,
+		phonenumber,
+		registertime,
+		lastlogintime
+		FROM
+		rtuser
+		WHERE
+		phonenumber = #{phonenumber}
+	</select>
 
     <select id="queryUserById"   parameterType="long">
 		SELECT
@@ -24,6 +42,7 @@
 			encryption,
 			phonenumber,
 			registertime,
+			lastlogintime
 		FROM
 			rtuser
 		WHERE
@@ -39,7 +58,8 @@
 			password,
 			encryption,
 			phonenumber,
-			registertime
+			registertime,
+			lastlogintime
 		FROM
 			rtuser
 		ORDER BY
@@ -54,7 +74,9 @@
 			password,
 			encryption,
 			phonenumber,
-			registertime)
+			registertime,
+			lastlogintime
+			)
 			 values
 			 (#{nickname},
 			 #{nameid},
@@ -62,7 +84,9 @@
 			 #{password},
 			 #{encryption},
 			 #{phonenumber},
-			 #{registertime})
+			 #{registertime},
+			 #{lastlogintime}
+			 )
 	</insert>
     <update id="updateUser" parameterType="com.wisn.entity.User">
 		update rtuser set
@@ -72,7 +96,8 @@
 		password=#{password},
 		encryption=#{encryption},
 		phonenumber=#{phonenumber},
-		registertime=#{registertime}
+		registertime=#{registertime},
+		lastlogintime=#{lastlogintime}
 		where
 		userid=#{userid}
 	</update>

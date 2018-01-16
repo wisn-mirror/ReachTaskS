@@ -16,14 +16,14 @@ public class PermissionInterceptor implements HandlerInterceptor{
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         String auth = request.getHeader("auth");
-        if("aa".equals(auth)){
+       /* if("aa".equals(auth)){
             return true;
         }else{
             response.setStatus(401);
             response.setHeader("content-type","application/json;charset=UTF-8");
             response.getWriter().print(JacksonUtil.toJSon(new HttpResponse<String>(401,"no auth")));
-        }
-        return false;
+        }*/
+        return true;
     }
 
     @Override

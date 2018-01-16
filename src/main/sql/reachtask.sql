@@ -24,3 +24,6 @@ CREATE TABLE `rtmessage` (
   `receivetime` bigint(13) NOT NULL COMMENT '接收时间',
   PRIMARY KEY (`messageid`)
 ) ENGINE=InnoDB AUTO_INCREMENT=10000 DEFAULT CHARSET=utf8 COMMENT='消息表';
+
+
+insert into rtuser    (nickname,    nameid,    iconurl,    password,    encryption,    phonenumber,    registertime)     values
