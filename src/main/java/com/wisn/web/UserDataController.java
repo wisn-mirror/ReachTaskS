@@ -4,6 +4,7 @@ package com.wisn.web;
 import com.wisn.entity.User;
 import com.wisn.exception.*;
 import com.wisn.http.HttpResponse;
+import com.wisn.http.bean.ChangePassword;
 import com.wisn.protocol.session.TokenEntity;
 import com.wisn.protocol.session.TokenManager;
 import com.wisn.service.UserService;
@@ -48,13 +49,14 @@ public class UserDataController {
     @ResponseBody
     @RequestMapping(value = "/changpassword", method = RequestMethod.PUT)
 //    public HttpResponse<String> changPassword(@RequestHeader(value = "Authorization") String Authorization, @RequestParam(value="oldPassword",required=true) String oldPassword,@RequestParam(value="newPassword",required=true) String newPassword) {
-    public HttpResponse<String> changPassword(@RequestHeader(value = "Authorization") String Authorization, @RequestParam(value="oldPassword",required=true) String oldPassword,@RequestParam(value="newPassword",required=true) String newPassword) {
-        System.out.println("Authorization:"+Authorization+" old:"+oldPassword+" new:"+newPassword);
+    public HttpResponse<String> changPassword(@RequestHeader(value = "Authorization") String Authorization,
+                                            @RequestBody ChangePassword changePassword) {
+        System.out.println("Authorization:"+Authorization+" old:"+changePassword.oldPassword+" new:"+changePassword.newPassword);
         HttpResponse<String> response = null;
         try {
             TokenEntity tokenEntity = TokenManager.getToken(Authorization);
             Long userid = tokenEntity.getUserid();
-            boolean updatePasswordSuccess = userService.updatePassword(userid, oldPassword, newPassword);
+            boolean updatePasswordSuccess = userService.updatePassword(userid, changePassword.oldPassword, changePassword.newPassword);
             if(!updatePasswordSuccess){
                 throw new OperationException("操作失败");
             }
