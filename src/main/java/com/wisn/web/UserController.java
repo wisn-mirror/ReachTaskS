@@ -15,8 +15,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import java.util.List;
-
 @Controller
 @RequestMapping("/user")
 public class UserController {
@@ -37,12 +35,12 @@ public class UserController {
                 response = new HttpResponse<>(403, "注册失败");
             }
         } catch (ParameterException e) {
-            response = new HttpResponse<>(400, "参数错误");
+            response = new HttpResponse<>(400, e.getMessage());
         } catch (AlreadyRegisteredException e) {
-            response = new HttpResponse<>(403, "已经注册");
+            response = new HttpResponse<>(403, e.getMessage());
         } catch (Exception e) {
             e.printStackTrace();
-            response = new HttpResponse<>(500, "服务器错误");
+            response = new HttpResponse<>(500, e.getMessage());
         }
         return response;
     }
@@ -69,15 +67,4 @@ public class UserController {
         return response;
     }
 
-    @ResponseBody
-    @RequestMapping(value = "/getusers", method = RequestMethod.GET)
-    public HttpResponse<List<User>> getAllUser(int offset, int limit) {
-        List<User> users = userService.getUsers(offset, limit);
-        System.out.println(" data:" + users);
-        HttpResponse<List<User>> response = new HttpResponse<>();
-        response.code = 200;
-        response.message = "success";
-        response.data = users;
-        return response;
-    }
 }

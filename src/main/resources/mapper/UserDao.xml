@@ -11,11 +11,39 @@
         <result property="password" column="password" javaType="java.lang.String"/>
         <result property="encryption" column="encryption" javaType="java.lang.String"/>
         <result property="phonenumber" column="phonenumber" javaType="java.lang.String"/>
+        <result property="token" column="token" javaType="java.lang.String"/>
+        <result property="expired" column="expired" javaType="java.lang.Long"/>
         <result property="registertime" column="registertime" javaType="java.lang.Long"/>
         <result property="lastlogintime" column="lastlogintime" javaType="java.lang.Long"/>
     </resultMap>
 
-	<select id="queryUserByPhoneNumber" resultMap="userMap"  >
+    <update id="updateToken" parameterType="com.wisn.entity.User">
+		update rtuser set
+		token=#{token},
+		expired=#{expired},
+		lastlogintime=#{lastlogintime}
+		where
+		userid=#{userid}
+	</update>
+
+    <update id="updatePassword" parameterType="com.wisn.entity.User">
+		update rtuser set
+		password=#{password},
+		encryption=#{encryption},
+		token=#{token},
+		expired=#{expired}
+		where
+		userid=#{userid}
+	</update>
+
+    <update id="updateIcon" parameterType="com.wisn.entity.User">
+		update rtuser set
+		iconurl=#{iconurl}
+		where
+		userid=#{userid}
+	</update>
+
+    <select id="queryUserByPhoneNumber" resultMap="userMap">
 		SELECT
 		userid,
 		nickname,
@@ -32,7 +60,7 @@
 		phonenumber = #{phonenumber}
 	</select>
 
-    <select id="queryUserById"   parameterType="long">
+    <select id="queryUserById" parameterType="long">
 		SELECT
 			userid,
 			nickname,
@@ -55,8 +83,6 @@
 			nickname,
 			nameid,
 			iconurl,
-			password,
-			encryption,
 			phonenumber,
 			registertime,
 			lastlogintime

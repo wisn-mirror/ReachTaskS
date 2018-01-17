@@ -5,8 +5,4 @@ public class TextUtils {
         if (text == null || text.trim().length() == 0) return true;
         return false;
     }
-    public static boolean isEmpty(Object text) {
-        if (text == null) return true;
-        return false;
-    }
 }

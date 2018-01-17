@@ -16,6 +16,12 @@ public interface UserDao {
 
     int updateUser(User user);
 
+    int updateToken(User user);
+
+    int updatePassword(User user);
+
+    int updateIcon(User user);
+
     int deleteUserByUserId(int id);
 
 }
