@@ -9,6 +9,8 @@ public interface UserService {
 
     boolean register(User user) throws AlreadyRegisteredException, ParameterException;
 
+    boolean updateIcon(User user) throws ParameterException;
+
     User login(String phoneNumber, String password) throws UnRegisteredException, ParameterException;
 
     List<User> getUsers(int offset, int limit);

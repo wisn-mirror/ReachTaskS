@@ -43,6 +43,16 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public boolean updateIcon(User user) throws ParameterException, UnRegisteredException {
+        if (user == null || user.getUserid() == 0 || TextUtils.isEmpty(user.getIconurl())) {
+            throw new ParameterException("参数缺少");
+        }
+        int i = userDao.updateIcon(user);
+        if (i != 1) throw new OperationException("操作失败");
+        return true;
+    }
+
+    @Override
     public User login(String phoneNumber, String password) throws UnRegisteredException, ParameterException {
         if (TextUtils.isEmpty(password) || TextUtils.isEmpty(phoneNumber)) {
             throw new ParameterException("参数缺少");
@@ -60,9 +70,11 @@ public class UserServiceImpl implements UserService {
                 user.setLastlogintime(System.currentTimeMillis());
                 TokenManager.putToken(token, new TokenEntity(user.getUserid(), expiredTime));
                 int i = userDao.updateToken(user);
+                System.out.println("3333");
                 if (i != 1) throw new NoAuthException("登录失败");
                 return user;
             } else {
+                System.out.println("tttt");
                 throw new NoAuthException("账号密码错误");
             }
         }
@@ -84,8 +96,12 @@ public class UserServiceImpl implements UserService {
         if (tempuser != null) {
             if (AESUtils.AesEncryption(oldPassword).equals(tempuser.getEncryption()) && oldPassword.equals(tempuser.getPassword())) {
                 tempuser.setPassword(newPassword);
+                String aesEncryption = AESUtils.AesEncryption(newPassword);
+                tempuser.setEncryption(aesEncryption);
                 int updatePassword = userDao.updatePassword(tempuser);
                 if (updatePassword != 1) throw new OperationException("操作失败");
+                //移除旧的身份认证
+
                 Date dateAfterHours = DateUtils.getDateAfterHours(new Date(), 8);
                 long expiredTime = dateAfterHours.getTime();
                 String token = UUID.randomUUID().toString();
@@ -97,7 +113,7 @@ public class UserServiceImpl implements UserService {
                 if (i != 1) throw new OperationException("操作失败");
                 return true;
             } else {
-                throw new NoAuthException("账号密码错误");
+                throw new NoAuthException("密码错误");
             }
         } else {
             throw new UnRegisteredException("账号未注册");

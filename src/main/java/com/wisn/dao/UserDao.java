@@ -12,6 +12,8 @@ public interface UserDao {
 
     List<User> queryAllUser(@Param("offset") int offset, @Param("limit") int limit);
 
+    List<User> queryAllToken();
+
     int insertUser(User user);
 
     int updateUser(User user);

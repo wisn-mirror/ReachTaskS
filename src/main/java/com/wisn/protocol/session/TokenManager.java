@@ -9,7 +9,7 @@ public class TokenManager {
         onLineUsers.put(token, tokenEntity);
     }
 
-    public static void removeToken(String token, TokenEntity tokenEntity) {
+    public static void removeToken(String token) {
         onLineUsers.remove(token);
     }
 
@@ -24,7 +24,6 @@ public class TokenManager {
 //    }
 
     public static boolean isOnline(String tokenStr) {
-
         if(tokenStr==null)return false;
         TokenEntity token = onLineUsers.get(tokenStr);
         if (token == null || token.getUserid() == 0) return false;

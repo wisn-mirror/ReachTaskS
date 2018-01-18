@@ -60,7 +60,7 @@
 		phonenumber = #{phonenumber}
 	</select>
 
-    <select id="queryUserById" parameterType="long">
+    <select id="queryUserById" resultMap="userMap">
 		SELECT
 			userid,
 			nickname,
@@ -91,6 +91,14 @@
 		ORDER BY
 			registertime
 		LIMIT #{offset}, #{limit}
+	</select>
+	<select id="queryAllToken" resultMap="userMap">
+		SELECT
+		userid,
+		token,
+		expired
+		FROM
+		rtuser
 	</select>
     <insert id="insertUser" useGeneratedKeys="true" keyProperty="userid">
 		insert into rtuser

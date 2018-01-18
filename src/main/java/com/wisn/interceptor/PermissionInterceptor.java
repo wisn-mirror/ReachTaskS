@@ -17,11 +17,9 @@ import javax.servlet.http.HttpServletResponse;
 public class PermissionInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-
         String authorization = request.getHeader("Authorization");
         System.out.println("Authorization:"+authorization);
-        return true;
-       /* if (TextUtils.isEmpty(authorization)) {
+        if(TextUtils.isEmpty(authorization)) {
             response.setStatus(400);
             return false;
         }
@@ -32,7 +30,7 @@ public class PermissionInterceptor implements HandlerInterceptor {
             response.getWriter().print(JacksonUtil.toJSon(new HttpResponse<String>(401, "no auth")));
             return false;
         }
-        return true;*/
+        return true;
     }
 
     @Override
