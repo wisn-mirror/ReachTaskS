@@ -1,0 +1,16 @@
+protoc类型	java类型	c++类型
+double	double	double
+float	float	float
+int32	int	int32
+int64	long	int64
+uint32	int	uint32
+uint64	long	uint64
+sint32	int	int32
+sint64	long	int64
+fixed32	int	uint32
+fixed64	long	uint64
+sfixed32	int	uint32
+sfixed64	long	uint64
+bool	boolean	bool
+string	String	string
+bytes	ByteString	string

@@ -1,6 +1,7 @@
 package com.wisn.test.client;
 
 
+import com.wisn.protocol.protobuf.beans.EMessageMudule;
 import com.wisn.protocol.request.Request;
 import com.wisn.protocol.request.RequestEncoder;
 import com.wisn.protocol.response.ResponseDecode;
@@ -36,7 +37,17 @@ public class Client {
         }
         long start = System.nanoTime();
         for(int i=0;i<10000;i++){
-            Request request=Request.valueOf((short)1,(short)2,("helloworld"+i).getBytes());
+            EMessageMudule.EMessage eMessage = EMessageMudule.EMessage.newBuilder()
+                    .setMessageid(i)
+                    .setFromuserid(222)
+                    .setTargetuserid(10000)
+                    .setMessagetype(3)
+                    .setStatus(-1)
+                    .setContent("消息体")
+                    .setCreatetime(System.currentTimeMillis())
+                    .setReceivetime(-1).build();
+            eMessage.toByteArray();
+            Request request=Request.valueOf((short)1,(short)2,eMessage.toByteArray());
 
             channel.writeAndFlush(request);
         }
