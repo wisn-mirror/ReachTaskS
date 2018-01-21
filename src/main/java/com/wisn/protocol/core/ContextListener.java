@@ -2,7 +2,10 @@ package com.wisn.protocol.core;
 
 import com.wisn.dao.UserDao;
 import com.wisn.entity.User;
+import com.wisn.protocol.session.TokenEntity;
+import com.wisn.protocol.session.TokenManager;
 import com.wisn.service.impl.UserServiceImpl;
+import com.wisn.tools.LogUtils;
 import com.wisn.tools.PropertiesOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -12,13 +15,16 @@ import org.springframework.web.context.support.WebApplicationContextUtils;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import java.util.*;
+
 @Component
 public class ContextListener implements ServletContextListener {
 
+    private static final String TAG = "ContextListener";
     private Timer timer;
 
     private UserDao userDao;
     private UserServiceImpl userServiceImpl;
+    private WebApplicationContext webApplicationContext;
 
     @Override
     public void contextInitialized(ServletContextEvent servletContextEvent) {
@@ -34,22 +40,30 @@ public class ContextListener implements ServletContextListener {
                 MessageServer.start(host, port);
             }
         }
-        WebApplicationContext webApplicationContext = WebApplicationContextUtils.getWebApplicationContext(servletContextEvent.getServletContext());
-        if(webApplicationContext != null){
-            userDao = (UserDao) webApplicationContext.getBean("UserDao");
+        webApplicationContext = WebApplicationContextUtils.getWebApplicationContext(servletContextEvent.getServletContext());
+        if (webApplicationContext != null) {
+            userDao = webApplicationContext.getBean(UserDao.class);
             List<User> users = userDao.queryAllToken();
-            for(User user:users){
-                System.out.println(user.toString());
+            for (User user : users) {
+                LogUtils.d(TAG, "user:"+user.toString() );
+                if (user == null || user.getToken() == null || user.getExpired() == 0) continue;
+                TokenEntity tokenEntity = new TokenEntity(user.getUserid(), user.getExpired());
+                if (!tokenEntity.isExpired()) {
+                    LogUtils.d(TAG, user.getUserid() + "add tokenManager");
+                    TokenManager.putToken(user.getToken(), tokenEntity);
+                } else {
+                    LogUtils.d(TAG, user.getUserid() + "is expired");
+                }
             }
-        }else {
-            System.out.println("33333");
+        } else {
+            LogUtils.d(TAG, "webApplicationContext is" + webApplicationContext);
         }
 
         timer = new Timer();
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
-//                System.out.println(" userDao"+userDao);
+
             }
         }, new Date(), 2000);
     }

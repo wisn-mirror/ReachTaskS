@@ -42,6 +42,14 @@ public class TokenEntity {
     }
 
     public boolean isExpired() {
-        return System.currentTimeMillis() < expired;
+        return System.currentTimeMillis() >expired;
+    }
+
+    @Override
+    public String toString() {
+        return "TokenEntity{" +
+                "userid=" + userid +
+                ", expired=" + expired +
+                '}';
     }
 }

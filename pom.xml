@@ -39,11 +39,11 @@
         </dependency>
 
         <!-- 2.数据库 -->
+        <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>6.0.6</version>
-            <scope>runtime</scope>
+            <version>5.1.45</version>
         </dependency>
         <dependency>
             <groupId>c3p0</groupId>
@@ -144,11 +144,7 @@
             <artifactId>spring-webmvc</artifactId>
             <version>${spring.version}</version>
         </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-asm</artifactId>
-            <version>3.1.4.RELEASE</version>
-        </dependency>
+
         <!-- 4)Spring test -->
         <dependency>
             <groupId>org.springframework</groupId>
@@ -194,5 +190,17 @@
     </dependencies>
     <build>
         <finalName>ReachTaskS</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <source>1.8</source><!-- 源代码开发版本 -->
+                    <target>1.8</target><!-- java编译版本 -->
+                    <encoding>UTF8</encoding> <!-- 项目的编码 -->
+                </configuration>
+            </plugin>
+        </plugins>
     </build>
 </project>

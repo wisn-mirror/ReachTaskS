@@ -20,7 +20,7 @@ public class ScannerTargetInvoker implements BeanPostProcessor {
     @Nullable
     @Override
     public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
-        scanner(bean, beanName);
+       // scanner(bean, beanName);
         return bean;
     }
 
