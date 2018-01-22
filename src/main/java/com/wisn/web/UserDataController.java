@@ -76,6 +76,36 @@ public class UserDataController {
         return response;
     }
 
+    @ResponseBody
+    @RequestMapping(value = "/loginout", method = RequestMethod.DELETE)
+    public HttpResponse<User> loginout(@RequestHeader(value = "Authorization") String Authorization) {
+        HttpResponse<User> response = null;
+        try {
+            TokenEntity tokenEntity = TokenManager.getToken(Authorization);
+            if(tokenEntity==null||tokenEntity.getUserid()==0){
+                throw new NoAuthException("没有登录");
+            }
+            Long userid = tokenEntity.getUserid();
+            boolean loginOut = userService.loginOut(userid);
+            if (!loginOut) {
+                throw new OperationException("操作失败");
+            }
+            response = new HttpResponse<>(200, "登出成功");
+            return response;
+        } catch (ParameterException e) {
+            response = new HttpResponse<>(400, e.getMessage());
+        } catch (UnRegisteredException e) {
+            response = new HttpResponse<>(401,  e.getMessage());
+        } catch (NoAuthException e) {
+            response = new HttpResponse<>(403,  e.getMessage());
+        } catch (OperationException e) {
+            response = new HttpResponse<>(500,  e.getMessage());
+        } catch (Exception e) {
+            e.printStackTrace();
+            response = new HttpResponse<>(500,  e.getMessage());
+        }
+        return response;
+    }
 
     @ResponseBody
     @RequestMapping(value = "/uploadicon", method = RequestMethod.POST)

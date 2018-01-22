@@ -13,6 +13,8 @@ public interface UserService {
 
     User login(String phoneNumber, String password) throws UnRegisteredException, ParameterException;
 
+    boolean loginOut(long userid) throws UnRegisteredException, ParameterException;
+
     List<User> getUsers(int offset, int limit);
 
     boolean updatePassword(long userid, String oldPassword, String newPassword) throws OperationException, ParameterException, NoAuthException, UnRegisteredException;

@@ -1,4 +1,5 @@
-option java_package="com.wisn.protocol.protobuf.beans";
+//option java_package="com.wisn.protocol.protobuf.beans";
+option java_package="com.wisn.mainmodule.protocal.protobuf.beans";
 option java_outer_classname="EMessageMudule";
 message EMessage{
     required int64 messageid=1;

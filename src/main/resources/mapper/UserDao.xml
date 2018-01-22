@@ -68,6 +68,8 @@
 			iconurl,
 			password,
 			encryption,
+		token,
+		expired,
 			phonenumber,
 			registertime,
 			lastlogintime

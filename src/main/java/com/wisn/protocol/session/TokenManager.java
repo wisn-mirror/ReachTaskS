@@ -9,16 +9,21 @@ import java.util.concurrent.ConcurrentHashMap;
 public class TokenManager {
     private static final ConcurrentHashMap<String, TokenEntity> onLineUsers = new ConcurrentHashMap<>();
 
-    public static void putToken(String token, TokenEntity tokenEntity) {
+    public static boolean putToken(String token, TokenEntity tokenEntity) {
         print();
         if (token == null || tokenEntity == null) {
-            return;
+            return false;
         }
         onLineUsers.put(token, tokenEntity);
+        return true;
     }
 
-    public static void removeToken(String token) {
+    public static boolean removeToken(String token) {
+        if (token == null) {
+            return false;
+        }
         onLineUsers.remove(token);
+        return true;
     }
 
     public static TokenEntity getToken(String token) {

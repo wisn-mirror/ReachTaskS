@@ -37,6 +37,5 @@ public class MessageServer {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
     }
 }

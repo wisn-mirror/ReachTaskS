@@ -25,6 +25,7 @@ public class ContextListener implements ServletContextListener {
     private UserDao userDao;
     private UserServiceImpl userServiceImpl;
     private WebApplicationContext webApplicationContext;
+    private boolean enable;
 
     @Override
     public void contextInitialized(ServletContextEvent servletContextEvent) {
@@ -35,7 +36,7 @@ public class ContextListener implements ServletContextListener {
             propertiesOperation.printProperties();
             String host = properties.getProperty("host");
             int port = Integer.parseInt(properties.getProperty("port"));
-            boolean enable = Boolean.valueOf(properties.getProperty("enable"));
+            enable = Boolean.valueOf(properties.getProperty("enable"));
             if (enable) {
                 MessageServer.start(host, port);
             }

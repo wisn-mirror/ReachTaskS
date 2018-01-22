@@ -82,6 +82,28 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public boolean loginOut(long userid) throws UnRegisteredException, ParameterException {
+        if (userid == 0) {
+            throw new ParameterException("参数缺少");
+        }
+        User tempuser = userDao.queryUserById(userid);
+        if (tempuser != null) {
+            boolean removeToken = TokenManager.removeToken(tempuser.getToken());
+            if(!removeToken) throw new OperationException("操作失败");
+            String token = UUID.randomUUID().toString();
+            tempuser.setToken(token);
+            tempuser.setExpired(System.currentTimeMillis());
+            tempuser.setLastlogintime(System.currentTimeMillis());
+            int i = userDao.updateToken(tempuser);
+            if (i != 1) throw new OperationException("操作失败");
+            return true;
+        } else {
+            throw new NoAuthException("没有权限");
+        }
+    }
+
+
+    @Override
     public List<User> getUsers(int offset, int limit) {
         List<User> users = userDao.queryAllUser(offset, limit);
         return users;
