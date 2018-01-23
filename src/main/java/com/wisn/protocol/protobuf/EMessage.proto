@@ -1,5 +1,5 @@
-//option java_package="com.wisn.protocol.protobuf.beans";
-option java_package="com.wisn.mainmodule.protocal.protobuf.beans";
+option java_package="com.wisn.protocol.protobuf.beans";
+//option java_package="com.wisn.mainmodule.protocal.protobuf.beans";
 option java_outer_classname="EMessageMudule";
 message EMessage{
     required int64 messageid=1;
@@ -7,7 +7,9 @@ message EMessage{
     required int64 targetuserid=3;
     required int32 messagetype=4;
     required int32 status=5;
-    required string content=6;
-    required int64 createtime=7;
-    required int64 receivetime=8;
+    required int64 createtime=6;
+    required int64 receivetime=7;
+    required string token=8;
+    required string content=9;
+
 }

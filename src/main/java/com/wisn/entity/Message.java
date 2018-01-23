@@ -1,5 +1,7 @@
 package com.wisn.entity;
 
+import com.wisn.protocol.protobuf.beans.EMessageMudule;
+
 /**
  * `messageid` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '消息id',
  * `fromuserid` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '发送者用户ID',
@@ -21,6 +23,15 @@ public class Message {
     private long receivetime;
 
     public Message() {
+    }
+    public Message(EMessageMudule.EMessage eMessage){
+        this.fromuserid = eMessage.getFromuserid();
+        this.targetuserid = eMessage.getTargetuserid();
+        this.messagetype = eMessage.getMessagetype();
+        this.status = eMessage.getStatus();
+        this.content = eMessage.getContent();
+        this.createtime = eMessage.getCreatetime();
+        this.receivetime = eMessage.getReceivetime();
     }
 
     public Message(long fromuserid, long targetuserid, int messagetype, int status, String content, long createtime, long receivetime) {

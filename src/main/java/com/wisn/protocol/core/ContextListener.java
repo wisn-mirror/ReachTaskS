@@ -29,7 +29,7 @@ public class ContextListener implements ServletContextListener {
 
     @Override
     public void contextInitialized(ServletContextEvent servletContextEvent) {
-        String file = servletContextEvent.getServletContext().getRealPath("/WEB-INF/classes/netty.properties");
+        String file = servletContextEvent.getServletContext().getRealPath("/WEB-INF/classes/config.properties");
         PropertiesOperation propertiesOperation = new PropertiesOperation(file);
         Properties properties = propertiesOperation.getProperties();
         if (properties != null) {

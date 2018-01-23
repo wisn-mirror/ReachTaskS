@@ -2,6 +2,7 @@ package com.wisn.protocol.response;
 
 
 import com.wisn.protocol.ConstantValues;
+import com.wisn.protocol.request.Request;
 
 import java.util.Arrays;
 
@@ -18,6 +19,13 @@ public class Response {
         Response.setCmd(cmd);
         Response.setResultCode(resultCode);
         Response.setData(data);
+        return Response;
+    }
+
+    public static Response valueOf(Request request) {
+        Response Response = new Response();
+        Response.setModule(request.getModule());
+        Response.setCmd(request.getCmd());
         return Response;
     }
 
