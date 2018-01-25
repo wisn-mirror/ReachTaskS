@@ -33,11 +33,15 @@ public class UserDataController {
 
     @ResponseBody
     @RequestMapping(value = "/getusers", method = RequestMethod.GET)
-    public HttpResponse<List<User>> getAllUser(int offset, int limit) {
+    public HttpResponse<List<User>> getAllUser(@RequestHeader(value = "Authorization") String Authorization,int offset, int limit) {
         HttpResponse<List<User>> response;
+
         List<User> users = null;
         try {
-            users = userService.getUsers(offset, limit);
+            TokenEntity tokenEntity = TokenManager.getToken(Authorization);
+            Long userid = tokenEntity.getUserid();
+            System.out.println("userid：：：：：：：：：：："+userid);
+            users = userService.getUsers(userid,offset, limit);
             response = new HttpResponse<>(200, "获取成功");
             response.data = users;
         } catch (Exception e) {

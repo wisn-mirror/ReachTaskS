@@ -8,6 +8,8 @@ import java.util.List;
 public interface UserDao {
     User queryUserById(long userId);
 
+    List<User> queryAllUserExistM(@Param("userid") long userId, @Param("offset") int offset, @Param("limit") int limit);
+
     User queryUserByPhoneNumber(String phonenumber);
 
     List<User> queryAllUser(@Param("offset") int offset, @Param("limit") int limit);

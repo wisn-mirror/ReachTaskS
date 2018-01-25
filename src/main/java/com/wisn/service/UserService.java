@@ -15,7 +15,7 @@ public interface UserService {
 
     boolean loginOut(long userid) throws UnRegisteredException, ParameterException;
 
-    List<User> getUsers(int offset, int limit);
+    List<User> getUsers(long userid,int offset, int limit);
 
     boolean updatePassword(long userid, String oldPassword, String newPassword) throws OperationException, ParameterException, NoAuthException, UnRegisteredException;
 

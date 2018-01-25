@@ -94,6 +94,22 @@
 			registertime
 		LIMIT #{offset}, #{limit}
 	</select>
+	<select id="queryAllUserExistM" resultMap="userMap">
+		SELECT
+		userid,
+		nickname,
+		nameid,
+		iconurl,
+		phonenumber,
+		registertime,
+		lastlogintime
+		FROM
+		rtuser
+		where userid!=#{userid}
+		ORDER BY
+		registertime
+		LIMIT #{offset}, #{limit}
+	</select>
 	<select id="queryAllToken" resultMap="userMap">
 		SELECT
 		userid,

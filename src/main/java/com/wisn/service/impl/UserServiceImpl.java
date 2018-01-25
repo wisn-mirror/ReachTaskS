@@ -104,8 +104,9 @@ public class UserServiceImpl implements UserService {
 
 
     @Override
-    public List<User> getUsers(int offset, int limit) {
-        List<User> users = userDao.queryAllUser(offset, limit);
+    public List<User> getUsers(long userid,int offset, int limit) {
+//        List<User> users = userDao.queryAllUser(offset, limit);
+        List<User> users = userDao.queryAllUserExistM(userid,offset, limit);
         return users;
     }
 
