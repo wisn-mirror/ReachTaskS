@@ -1,4 +1,4 @@
-package com.wisn.module.constant;
+package com.wisn.protocol.module.constant;
 
 public interface CmdId {
     interface AuthMessage {

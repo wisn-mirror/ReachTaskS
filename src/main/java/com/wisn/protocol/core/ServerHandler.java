@@ -1,10 +1,9 @@
 package com.wisn.protocol.core;
 
 import com.google.protobuf.InvalidProtocolBufferException;
-import com.wisn.entity.Message;
 import com.wisn.exception.NoAuthException;
-import com.wisn.module.constant.CmdId;
-import com.wisn.module.constant.ModuleId;
+import com.wisn.protocol.module.constant.CmdId;
+import com.wisn.protocol.module.constant.ModuleId;
 import com.wisn.protocol.ResponseCode;
 import com.wisn.protocol.core.scanner.Invoker;
 import com.wisn.protocol.core.scanner.InvokerHolder;
@@ -28,6 +27,7 @@ public class ServerHandler extends SimpleChannelInboundHandler<Request> {
     }
 
     private void handlerMessage(Session session, Request request) {
+        LogUtils.d(TAG,"request:"+request);
         short result=0;
         try {
             Invoker invoker = InvokerHolder.getInvoker(request.getModule(), request.getCmd());
@@ -50,7 +50,9 @@ public class ServerHandler extends SimpleChannelInboundHandler<Request> {
                 } else {
                     result= (short) invoker.invoke(eMessage);
                 }
+                LogUtils.d(TAG,"result:"+result);
             }
+            LogUtils.d(TAG,"result:"+invoker);
         } catch (InvalidProtocolBufferException e) {
             e.printStackTrace();
             result= ResponseCode.SERVER_EXCEPTION;

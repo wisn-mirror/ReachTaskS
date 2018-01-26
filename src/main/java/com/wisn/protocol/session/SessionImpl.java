@@ -41,4 +41,11 @@ public class SessionImpl implements Session {
     public void close() {
         channel.close();
     }
+
+    @Override
+    public String toString() {
+        return "SessionImpl{" +
+                "channel=" + channel + channel.attr(Attribute_Key).get()+
+                '}';
+    }
 }

@@ -1,14 +1,15 @@
-package com.wisn.module;
+package com.wisn.protocol.module;
 
-import com.wisn.module.constant.CmdId;
-import com.wisn.module.constant.ModuleId;
+import com.wisn.protocol.module.constant.CmdId;
+import com.wisn.protocol.module.constant.ModuleId;
 import com.wisn.protocol.ResponseCode;
 import com.wisn.protocol.protobuf.beans.EMessageMudule;
 import com.wisn.protocol.session.SessionManager;
+import org.springframework.stereotype.Component;
 
 import java.util.Iterator;
 import java.util.Set;
-
+@Component
 public class ChartMessageImpl implements ChartMessage {
 
     @Override
