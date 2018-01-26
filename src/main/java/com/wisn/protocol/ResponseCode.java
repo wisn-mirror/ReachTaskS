@@ -1,6 +1,10 @@
 package com.wisn.protocol;
 
 public interface ResponseCode {
+    /**
+     * 新消息
+     */
+    short newMessage = 10000;
 
     /**
      * 成功

@@ -19,7 +19,7 @@ public class SessionManager {
             return onLineSessions.putIfAbsent(id, session) != null;
         }
         return false;*/
-        onLineSessions.putIfAbsent(id, session);
+        onLineSessions.put(id, session);
         print();
         return true;
     }
@@ -43,6 +43,7 @@ public class SessionManager {
     }
 
     public static Set<Long> getOnlines() {
+        print();
         return Collections.unmodifiableSet(onLineSessions.keySet());
     }
 

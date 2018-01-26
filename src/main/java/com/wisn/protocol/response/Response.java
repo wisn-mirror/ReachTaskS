@@ -26,6 +26,7 @@ public class Response {
         Response Response = new Response();
         Response.setModule(request.getModule());
         Response.setCmd(request.getCmd());
+        Response.setData(request.getData());
         return Response;
     }
 

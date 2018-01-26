@@ -15,7 +15,7 @@ public class ChartMessageImpl implements ChartMessage {
     @Override
     public short sengMessageToOne(EMessageMudule.EMessage message) {
         boolean sendMessage = SessionManager.sendMessage(message.getTargetuserid()
-                , ModuleId.chatMessage, CmdId.ChartMessage.sendMessageToOne, ResponseCode.SUCCESS, message);
+                , ModuleId.chatMessage, CmdId.ChartMessage.sendMessageToOne, ResponseCode.newMessage, message);
         if (sendMessage)
             return ResponseCode.SUCCESS;
         return ResponseCode.SERVER_EXCEPTION;
@@ -27,8 +27,12 @@ public class ChartMessageImpl implements ChartMessage {
         Iterator<Long> iterator = onlines.iterator();
         while (iterator.hasNext()) {
             Long next = iterator.next();
+            if(next==message.getFromuserid()){
+
+                //continue;
+            }
             SessionManager.sendMessage(next
-                    , ModuleId.chatMessage, CmdId.ChartMessage.sendMessageToOne, ResponseCode.SUCCESS, message);
+                    , ModuleId.chatMessage, CmdId.ChartMessage.sendMessageToOne, ResponseCode.newMessage, message);
         }
         return ResponseCode.SUCCESS;
     }

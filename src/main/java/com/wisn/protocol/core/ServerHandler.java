@@ -28,12 +28,13 @@ public class ServerHandler extends SimpleChannelInboundHandler<Request> {
 
     private void handlerMessage(Session session, Request request) {
         LogUtils.d(TAG,"request:"+request);
+        EMessageMudule.EMessage eMessage=null;
         short result=0;
         try {
             Invoker invoker = InvokerHolder.getInvoker(request.getModule(), request.getCmd());
             if (invoker != null) {
                 //判断权限
-                EMessageMudule.EMessage eMessage = EMessageMudule.EMessage.parseFrom(request.getData());
+                eMessage = EMessageMudule.EMessage.parseFrom(request.getData());
                 if (eMessage == null || eMessage.getToken() == null) {
                     throw new NoAuthException("没有认证");
                 }
@@ -63,6 +64,11 @@ public class ServerHandler extends SimpleChannelInboundHandler<Request> {
             e.printStackTrace();
             result= ResponseCode.SERVER_EXCEPTION;
         }
+//        EMessageMudule.EMessage builder = EMessageMudule.EMessage.newBuilder()
+//                .setMessageid(eMessage.getMessageid())
+//                .setReceivetime(System.currentTimeMillis()).build();
+//        //只需要消息id和接收时间
+//        request.setData(builder.toByteArray());
         Response response = Response.valueOf(request);
         response.setResultCode(result);
         session.write(response);
