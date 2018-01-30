@@ -49,6 +49,7 @@
     <mvc:interceptors>
         <mvc:interceptor>
             <mvc:mapping path="/userdata/**"/>
+            <mvc:mapping path="/moment/**"/>
             <bean class="com.wisn.interceptor.PermissionInterceptor"></bean>
         </mvc:interceptor>
     </mvc:interceptors>

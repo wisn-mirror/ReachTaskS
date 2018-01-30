@@ -9,7 +9,7 @@ import com.wisn.protocol.protobuf.beans.EMessageMudule;
 @SocketModule(module= ModuleId.chatMessage)
 public interface ChartMessage {
     @SocketCmd(cmd = CmdId.ChartMessage.sendMessageToOne)
-    short sengMessageToOne( EMessageMudule.EMessage message);
+    short sendMessageToOne( EMessageMudule.EMessage message);
     @SocketCmd(cmd = CmdId.ChartMessage.sendMessageToAll)
-    short sengMessageToAll( EMessageMudule.EMessage message);
+    short sendMessageToAll( EMessageMudule.EMessage message);
 }

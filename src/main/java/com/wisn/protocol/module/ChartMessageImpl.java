@@ -13,7 +13,7 @@ import java.util.Set;
 public class ChartMessageImpl implements ChartMessage {
 
     @Override
-    public short sengMessageToOne(EMessageMudule.EMessage message) {
+    public short sendMessageToOne(EMessageMudule.EMessage message) {
         boolean sendMessage = SessionManager.sendMessage(message.getTargetuserid()
                 , ModuleId.chatMessage, CmdId.ChartMessage.sendMessageToOne, ResponseCode.newMessage, message);
         if (sendMessage)
@@ -22,7 +22,7 @@ public class ChartMessageImpl implements ChartMessage {
     }
 
     @Override
-    public short sengMessageToAll(EMessageMudule.EMessage message) {
+    public short sendMessageToAll(EMessageMudule.EMessage message) {
         Set<Long> onlines = SessionManager.getOnlines();
         Iterator<Long> iterator = onlines.iterator();
         while (iterator.hasNext()) {

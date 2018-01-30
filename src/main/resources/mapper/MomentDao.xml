@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wisn.dao.MomentDao">
+    <resultMap id="MomentMap" type="com.wisn.entity.Moment">
+        <id property="momentid" column="momentid" javaType="java.lang.Long"/>
+		<result property="userid" column="userid" javaType="java.lang.Long"/>
+		<result property="status" column="status" javaType="java.lang.Integer"/>
+        <result property="content" column="content" javaType="java.lang.String"/>
+        <result property="imageres" column="imageres" javaType="java.lang.String"/>
+        <result property="videores" column="videores" javaType="java.lang.String"/>
+        <result property="location" column="location" javaType="java.lang.String"/>
+        <result property="createtime" column="createtime" javaType="java.lang.Long"/>
+    </resultMap>
+
+    <select id="queryMomentByMomentId" resultMap="MomentMap">
+		SELECT
+		momentid,
+		userid,
+		status,
+		content,
+		imageres,
+		videores,
+		location,
+		createtime
+		FROM
+		rtmoment
+		WHERE
+		momentid = #{momentid}
+	</select>
+	<select id="queryAllMoment" resultMap="MomentMap">
+		SELECT
+		momentid,
+		userid,
+		status,
+		content,
+		imageres,
+		videores,
+		location,
+		createtime
+		FROM
+		rtmoment
+		WHERE
+		userid = #{userid}
+		ORDER BY
+		createtime
+		LIMIT #{offset}, #{limit}
+	</select>
+	<select id="queryAllMomentByCreateTime" resultMap="MomentMap">
+		SELECT
+		momentid,
+		userid,
+		status,
+		content,
+		imageres,
+		videores,
+		location,
+		createtime
+		FROM
+		rtmoment
+		WHERE
+		createtime >=#{createtime}
+		ORDER BY
+		createtime
+		LIMIT #{offset}, #{limit}
+	</select>
+
+	<insert id="insertMoment" useGeneratedKeys="true" keyProperty="momentid">
+		insert into rtmoment
+		(userid,
+		status,
+		content,
+		imageres,
+		videores,
+		location,
+		createtime
+		)
+		values
+		(#{userid},
+		#{status},
+		#{content},
+		#{imageres},
+		#{videores},
+		#{location},
+		#{createtime}
+		)
+	</insert>
+	<delete id="deleteMomentByUserId" parameterType="long">
+		delete from rtmoment where userid=#{userid}
+	</delete>
+	<delete id="deleteMomentByMomentId" parameterType="long">
+		delete from rtmoment where momentid=#{momentid}
+	</delete>
+
+</mapper>

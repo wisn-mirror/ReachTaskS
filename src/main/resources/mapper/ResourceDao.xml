@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wisn.dao.ResourceDao">
+    <resultMap id="ResourceMap" type="com.wisn.entity.Resource">
+        <id property="resourceid" column="resourceid" javaType="java.lang.Long"/>
+        <result property="status" column="status" javaType="java.lang.Integer"/>
+        <result property="type" column="type" javaType="java.lang.Integer"/>
+        <result property="imagepath" column="imagepath" javaType="java.lang.String"/>
+        <result property="createtime" column="createtime" javaType="java.lang.Long"/>
+    </resultMap>
+
+    <select id="queryResourceByResourceid" resultMap="ResourceMap">
+		SELECT
+			resourceid,
+			status,
+			restype,
+			imagepath,
+			createtime,
+		FROM
+			rtresource
+		WHERE
+			resourceid = #{resourceid}
+	</select>
+
+    <insert id="insertResource" useGeneratedKeys="true" keyProperty="resourceid">
+        <selectKey resultType="java.lang.Long" order="AFTER" keyProperty="resourceid">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+        insert into rtresource
+        (status,
+        restype,
+        imagepath,
+        createtime
+        )
+        values
+        (#{status},
+        #{restype},
+        #{imagepath},
+        #{createtime}
+        )
+    </insert>
+
+    <delete id="deleteResourceByResourceId" parameterType="long">
+		delete from rtresource where resourceid=#{resourceid}
+	</delete>
+</mapper>
