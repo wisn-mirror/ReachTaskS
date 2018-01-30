@@ -9,6 +9,7 @@ import com.wisn.protocol.session.TokenEntity;
 import com.wisn.protocol.session.TokenManager;
 import com.wisn.service.UserService;
 import com.wisn.tools.Base64Utils;
+import com.wisn.tools.FSUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.stereotype.Controller;
@@ -132,8 +133,9 @@ public class UserDataController {
             }
             String fileType = originalFilename.substring(originalFilename.lastIndexOf('.'));
             if ("jpeg".equalsIgnoreCase(fileType) || "png".equalsIgnoreCase(fileType) || "jpg".equalsIgnoreCase(fileType)) {
-                SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHHmmss");
-                String reallyFilename = sdf.format(new Date()) + UUID.randomUUID() + fileType;
+                SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
+                String uuid = FSUtils.getUUID();
+                String reallyFilename = sdf.format(new Date()) + FSUtils.getPath(uuid) + fileType;
                 FileOutputStream fos = new FileOutputStream(path + reallyFilename);
                 fos.write(icon.getBytes());
                 fos.flush();
@@ -161,11 +163,6 @@ public class UserDataController {
     }
 
 
-    @ResponseBody
-    @RequestMapping(value = "/aaaaaaa", method = RequestMethod.GET)
-    public HttpResponse<List<User>> changPassword(@RequestHeader HttpHeaders headers, String oldPassword, String newPassword) {
-        return null;
-    }
 
     @ResponseBody
     @RequestMapping(value = "/uploadiconbackup", method = RequestMethod.POST)
