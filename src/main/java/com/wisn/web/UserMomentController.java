@@ -104,8 +104,8 @@ public class UserMomentController {
             Moment moment = new Moment();
             moment.setUserid(userid);
             moment.setCreatetime(System.currentTimeMillis());
-            moment.setContent(content);
-            moment.setLocation(location);
+            moment.setContent( new String(content.getBytes("ISO-8859-1"), "UTF-8"));
+            moment.setLocation(new String(location.getBytes("ISO-8859-1"), "UTF-8"));
             moment.setImageres(moment.arrayToString(imageres));
             moment.setVideores(moment.arrayToString(videores));
             momentService.saveMoment(moment);
