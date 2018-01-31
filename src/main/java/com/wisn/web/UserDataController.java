@@ -1,15 +1,18 @@
 package com.wisn.web;
 
 
+import com.wisn.entity.Resource;
 import com.wisn.entity.User;
 import com.wisn.exception.*;
 import com.wisn.http.HttpResponse;
 import com.wisn.http.bean.ChangePassword;
 import com.wisn.protocol.session.TokenEntity;
 import com.wisn.protocol.session.TokenManager;
+import com.wisn.service.ResourceService;
 import com.wisn.service.UserService;
 import com.wisn.tools.Base64Utils;
 import com.wisn.tools.FSUtils;
+import jdk.management.resource.ResourceType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.stereotype.Controller;
@@ -30,6 +33,8 @@ public class UserDataController {
 
     @Autowired
     private UserService userService;
+    @Autowired
+    private ResourceService  resourceService;
 
 
     @ResponseBody
@@ -40,11 +45,16 @@ public class UserDataController {
         List<User> users = null;
         try {
             TokenEntity tokenEntity = TokenManager.getToken(Authorization);
+            if (tokenEntity == null || tokenEntity.getUserid() == 0) {
+                throw new NoAuthException("没有登录");
+            }
             Long userid = tokenEntity.getUserid();
             System.out.println("userid：：：：：：：：：：："+userid);
             users = userService.getUsers(userid,offset, limit);
             response = new HttpResponse<>(200, "获取成功");
             response.data = users;
+        } catch (NoAuthException e) {
+            response = new HttpResponse<>(403, e.getMessage());
         } catch (Exception e) {
             e.printStackTrace();
             response = new HttpResponse<>(500, e.getMessage());
@@ -60,6 +70,9 @@ public class UserDataController {
         HttpResponse<String> response = null;
         try {
             TokenEntity tokenEntity = TokenManager.getToken(Authorization);
+            if (tokenEntity == null || tokenEntity.getUserid() == 0) {
+                throw new NoAuthException("没有登录");
+            }
             Long userid = tokenEntity.getUserid();
             boolean updatePasswordSuccess = userService.updatePassword(userid, changePassword.oldPassword, changePassword.newPassword);
             if (!updatePasswordSuccess) {
@@ -114,39 +127,45 @@ public class UserDataController {
 
     @ResponseBody
     @RequestMapping(value = "/uploadicon", method = RequestMethod.POST)
-    public HttpResponse<String> upload(@RequestHeader(value = "Authorization") String Authorization, HttpServletRequest req) throws Exception {
+    public HttpResponse<String> upload(@RequestHeader(value = "Authorization") String Authorization, HttpServletRequest req)  {
         HttpResponse<String> stringHttpResponse = null;
         try {
             TokenEntity tokenEntity = TokenManager.getToken(Authorization);
+            if(tokenEntity==null||tokenEntity.getUserid()==0){
+                throw new NoAuthException("没有登录");
+            }
             Long userid = tokenEntity.getUserid();
-            String path = req.getSession().getServletContext().getRealPath("/") +
-                    "icon/";
+            String path = req.getSession().getServletContext().getRealPath("/");
             MultipartHttpServletRequest mreq = (MultipartHttpServletRequest) req;
             MultipartFile icon = mreq.getFile("icon");
             if (icon == null) {
                 throw new ParameterException("数据错误");
             }
             String originalFilename = icon.getOriginalFilename();
-            File tempfile = new File(path);
-            if (!tempfile.exists()) {
-                tempfile.mkdirs();
-            }
             String fileType = originalFilename.substring(originalFilename.lastIndexOf('.'));
-            if ("jpeg".equalsIgnoreCase(fileType) || "png".equalsIgnoreCase(fileType) || "jpg".equalsIgnoreCase(fileType)) {
+//            System.out.println(originalFilename+"  "+fileType);
+            if (".jpeg".equalsIgnoreCase(fileType) || ".png".equalsIgnoreCase(fileType) || ".jpg".equalsIgnoreCase(fileType)) {
                 SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
-                String uuid = FSUtils.getUUID();
-                String reallyFilename = sdf.format(new Date()) + FSUtils.getPath(uuid) + fileType;
-                FileOutputStream fos = new FileOutputStream(path + reallyFilename);
+                String filename = FSUtils.getUUID();
+                String reallyFilename = "files"+File.separator+sdf.format(new Date()) + FSUtils.getHashPath(filename) ;
+                File hashpath = new File(path +reallyFilename);
+                if(!hashpath.exists()){
+                    hashpath.mkdirs();
+                }
+                String requestFilePath=reallyFilename+filename+fileType;
+                FileOutputStream fos = new FileOutputStream( path +requestFilePath);
                 fos.write(icon.getBytes());
                 fos.flush();
                 fos.close();
                 User user = new User();
                 user.setUserid(userid);
-                user.setIconurl("/icon/" + reallyFilename);
+                Resource resource=new Resource(1,requestFilePath);
+                resourceService.saveResource(resource);
+                user.setIconurl(requestFilePath);
                 boolean updateIconSuccess = userService.updateIcon(user);
                 if (updateIconSuccess) {
                     stringHttpResponse = new HttpResponse<>(200, "上传成功");
-                    stringHttpResponse.data = "/icon/" + reallyFilename;
+                    stringHttpResponse.data = requestFilePath;
                     return stringHttpResponse;
                 }
                 throw new OperationException("操作失败");
@@ -155,6 +174,9 @@ public class UserDataController {
         } catch (ParameterException e) {
             e.printStackTrace();
             stringHttpResponse = new HttpResponse<>(400, e.getMessage());
+        } catch (NoAuthException e) {
+            e.printStackTrace();
+            stringHttpResponse = new HttpResponse<>(401, e.getMessage());
         } catch (IOException e) {
             e.printStackTrace();
             stringHttpResponse = new HttpResponse<>(500, e.getMessage());

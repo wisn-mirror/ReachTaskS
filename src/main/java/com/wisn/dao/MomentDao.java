@@ -8,7 +8,7 @@ import java.util.List;
 public interface MomentDao {
     Moment queryMomentByMomentId(long momentid);
 
-    List<Moment> queryAllMoment(long userid, @Param("offset") int offset, @Param("limit") int limit);
+    List<Moment> queryAllMoment( @Param("userid") long userid, @Param("offset") int offset, @Param("limit") int limit);
 
     List<Moment> queryAllMomentByCreateTime(long userid,long createtime);
 

@@ -9,6 +9,15 @@ public class Resource {
 
     public Resource() {
     }
+    /**
+     * 图片1，音频2，视频3，
+     */
+    public Resource(int restype, String imagepath) {
+        this.restype = restype;
+        this.imagepath = imagepath;
+        this.createtime=System.currentTimeMillis();
+        this.status=1;
+    }
 
     public Resource(long resourceid, int status, int restype, String imagepath, long createtime) {
         this.resourceid = resourceid;
@@ -56,5 +65,16 @@ public class Resource {
 
     public void setCreatetime(long createtime) {
         this.createtime = createtime;
+    }
+
+    @Override
+    public String toString() {
+        return "Resource{" +
+                "resourceid=" + resourceid +
+                ", status=" + status +
+                ", restype=" + restype +
+                ", imagepath='" + imagepath + '\'' +
+                ", createtime=" + createtime +
+                '}';
     }
 }

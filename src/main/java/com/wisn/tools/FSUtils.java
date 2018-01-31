@@ -25,7 +25,7 @@ public class FSUtils {
 	 * @param name
 	 * @return
 	 */
-	public static String getPath(String name) {
+	public static String getHashPath(String name) {
 		int code1 = name.hashCode();
 		int d1 = code1 & 15;
 		int code2 = (code1 >>> 4) & 15;

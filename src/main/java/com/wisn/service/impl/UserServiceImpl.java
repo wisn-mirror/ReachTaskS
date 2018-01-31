@@ -8,6 +8,7 @@ import com.wisn.protocol.session.TokenManager;
 import com.wisn.service.UserService;
 import com.wisn.tools.AESUtils;
 import com.wisn.tools.DateUtils;
+import com.wisn.tools.FSUtils;
 import com.wisn.tools.TextUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -62,7 +63,7 @@ public class UserServiceImpl implements UserService {
             if (AESUtils.AesEncryption(password).equals(user.getEncryption()) && password.equals(user.getPassword())) {
                 Date dateAfterHours = DateUtils.getDateAfterHours(new Date(), 8);
                 long expiredTime = dateAfterHours.getTime();
-                String token = UUID.randomUUID().toString();
+                String token = FSUtils.getUUID();
                 user.setEncryption("");
                 user.setPassword("");
                 user.setToken(token);
@@ -90,7 +91,7 @@ public class UserServiceImpl implements UserService {
         if (tempuser != null) {
             boolean removeToken = TokenManager.removeToken(tempuser.getToken());
             if(!removeToken) throw new OperationException("操作失败");
-            String token = UUID.randomUUID().toString();
+            String token = FSUtils.getUUID();
             tempuser.setToken(token);
             tempuser.setExpired(System.currentTimeMillis());
             tempuser.setLastlogintime(System.currentTimeMillis());
@@ -127,7 +128,7 @@ public class UserServiceImpl implements UserService {
 
                 Date dateAfterHours = DateUtils.getDateAfterHours(new Date(), 8);
                 long expiredTime = dateAfterHours.getTime();
-                String token = UUID.randomUUID().toString();
+                String token = FSUtils.getUUID();
                 tempuser.setToken(token);
                 tempuser.setExpired(expiredTime);
                 tempuser.setLastlogintime(System.currentTimeMillis());

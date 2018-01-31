@@ -8,7 +8,7 @@ import java.util.List;
 public interface MomentService {
      int saveMoment(Moment moment);
     Moment getMoment(long momentid);
-    List<Moment> getMomentAll(long momentid,int offset ,int limit);
+    List<Moment> getMomentAll(long userid,int offset ,int limit);
     int deleteMoment(long momentid);
     int deleteMomentByUserid(long userid);
 }

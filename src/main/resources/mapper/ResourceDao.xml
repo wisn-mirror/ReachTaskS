@@ -14,17 +14,15 @@
     <select id="queryResourceByResourceid" resultMap="ResourceMap">
 		SELECT
 			resourceid,
-			status,
-			restype,
-			imagepath,
-			createtime,
+			imagepath
 		FROM
 			rtresource
 		WHERE
 			resourceid = #{resourceid}
 	</select>
-
-    <insert id="insertResource" useGeneratedKeys="true" keyProperty="resourceid">
+    <!--insert into rtresource (status, restype, imagepath, createtime ) values (2, 1, 'dds', 3213124232 )-->
+    <!--<selectKey resultType="java.lang.Long" order="AFTER" keyProperty="resourceid">-->
+    <insert id="insertResource" parameterType="com.wisn.entity.Resource">
         <selectKey resultType="java.lang.Long" order="AFTER" keyProperty="resourceid">
             SELECT LAST_INSERT_ID()
         </selectKey>

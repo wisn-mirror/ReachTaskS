@@ -1,7 +1,9 @@
 package com.wisn.service.impl;
 
 import com.wisn.dao.MomentDao;
+import com.wisn.dao.ResourceDao;
 import com.wisn.entity.Moment;
+import com.wisn.entity.Resource;
 import com.wisn.exception.ParameterException;
 import com.wisn.service.MomentService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +16,8 @@ public class MomentServiceImpl implements MomentService {
 
     @Autowired
     MomentDao momentDao;
+    @Autowired
+    ResourceDao resourceDao;
 
     @Override
     public int saveMoment(Moment moment) {
@@ -34,11 +38,33 @@ public class MomentServiceImpl implements MomentService {
     }
 
     @Override
-    public List<Moment> getMomentAll(long momentid, int offset, int limit) {
-        if (momentid == 0) {
+    public List<Moment> getMomentAll(long userid, int offset, int limit) {
+        if (userid == 0) {
             throw new ParameterException("参数缺少");
         }
-        return momentDao.queryAllMoment(momentid, offset, limit);
+        List<Moment> moments = momentDao.queryAllMoment(userid, offset, limit);
+//        List<Moment> tempList=moments;
+        if(moments!=null){
+            for(int i=0;i<moments.size();i++){
+                Moment moment = moments.get(i);
+                List<Long> imageids = moment.strToArray(moment.getImageres());
+                for(Long resourceid:imageids){
+                    Resource resource = resourceDao.queryResourceByResourceid(resourceid);
+                    if(resource!=null){
+                        moments.get(i).addImage(resource.getImagepath());
+                    }
+                }
+                List<Long> videolist = moment.strToArray(moment.getVideores());
+                for(Long resourceid:videolist){
+                    Resource resource = resourceDao.queryResourceByResourceid(resourceid);
+                    if(resource!=null){
+                        moments.get(i).addvideo(resource.getImagepath());
+                    }
+                }
+
+            }
+        }
+        return moments;
     }
 
     @Override

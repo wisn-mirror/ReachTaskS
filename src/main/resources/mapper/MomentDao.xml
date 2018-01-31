@@ -60,6 +60,7 @@
 		FROM
 		rtmoment
 		WHERE
+		userid = #{userid} AND
 		createtime >=#{createtime}
 		ORDER BY
 		createtime

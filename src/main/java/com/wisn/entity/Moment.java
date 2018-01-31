@@ -1,5 +1,10 @@
 package com.wisn.entity;
 
+import com.wisn.tools.TextUtils;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class Moment {
     private long momentid;
     private long userid;
@@ -9,6 +14,8 @@ public class Moment {
     private String videores;
     private String location;
     private long createtime;
+    private List<String> imagelist;
+    private List<String> videolist;
 
     public Moment() {
     }
@@ -86,5 +93,50 @@ public class Moment {
 
     public void setCreatetime(long createtime) {
         this.createtime = createtime;
+    }
+
+    public List<String> getImagelist() {
+        return imagelist;
+    }
+
+    public void addImage(String imge) {
+        if(this.imagelist==null){
+            this.imagelist=new ArrayList<>();
+        }
+      this.imagelist.add(imge);
+    }
+
+
+    public List<String> getVideolist() {
+        return videolist;
+    }
+
+    public void addvideo(String videores) {
+        if(this.videolist==null){
+            this.videolist=new ArrayList<>();
+        }
+        this.videolist.add(videores);
+    }
+
+    public String arrayToString(List<Long> list) {
+        if(list==null)return "";
+        StringBuilder builder = new StringBuilder();
+        for (int i = 0; i < list.size(); i++) {
+            builder.append(list.get(i));
+            if (i != list.size() - 1) {
+                builder.append(";");
+            }
+        }
+        return builder.toString();
+    }
+
+    public List<Long> strToArray(String str) {
+        if(TextUtils.isEmpty(str))return null;
+        String[] split = str.split(";");
+        List<Long> list = new ArrayList<>();
+        for (int i = 0; i < split.length; i++) {
+            list.add(Long.parseLong(split[i]));
+        }
+        return list;
     }
 }
