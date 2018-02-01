@@ -30,7 +30,7 @@ import java.util.*;
 @RequestMapping("/moment")
 public class UserMomentController {
 
-    private static final String TAG ="UserMomentController" ;
+    private static final String TAG = "UserMomentController";
     @Autowired
     private MomentService momentService;
 
@@ -39,7 +39,7 @@ public class UserMomentController {
 
     @ResponseBody
     @RequestMapping(value = "/getments", method = RequestMethod.GET)
-    public HttpResponse<List<Moment>> getments(@RequestHeader(value = "Authorization") String Authorization,int offset, int limit) {
+    public HttpResponse<List<Moment>> getments(@RequestHeader(value = "Authorization") String Authorization, int offset, int limit) {
         HttpResponse<List<Moment>> response;
         List<Moment> moments = null;
         try {
@@ -48,9 +48,8 @@ public class UserMomentController {
                 throw new NoAuthException("没有登录");
             }
             Long userid = tokenEntity.getUserid();
-            System.out.println("userid：：：：：：：：：：："+userid);
-             moments= momentService.getMomentAll(userid,offset, limit);
-            response = new HttpResponse<>(200, "获取成功");
+            moments = momentService.getMomentAll(userid, offset, limit);
+            response = new HttpResponse<>(200, "获取动态列表成功");
             response.data = moments;
         } catch (NoAuthException e) {
             response = new HttpResponse<>(403, e.getMessage());
@@ -82,20 +81,20 @@ public class UserMomentController {
             while (fileNames.hasNext()) {
                 String next = fileNames.next();
                 if (next == null) continue;
-                System.out.println("name:"+next);
+                System.out.println("name:" + next);
                 List<MultipartFile> files = mreq.getFiles(next);
                 if (next.equalsIgnoreCase("imageres")) {
                     for (MultipartFile file : files) {
-                        System.out.println("file:"+file);
+                        System.out.println("file:" + file);
                         Resource resource = saveFile(basePath, file, true);
-                        if(resource!=null)
-                        imageres.add(resource.getResourceid());
+                        if (resource != null)
+                            imageres.add(resource.getResourceid());
                     }
                 } else if (next.equalsIgnoreCase("videores")) {
                     for (MultipartFile file : files) {
                         Resource resource = saveFile(basePath, file, false);
-                        if(resource!=null)
-                        videores.add(resource.getResourceid());
+                        if (resource != null)
+                            videores.add(resource.getResourceid());
                     }
                 } else {
                     continue;
@@ -104,12 +103,12 @@ public class UserMomentController {
             Moment moment = new Moment();
             moment.setUserid(userid);
             moment.setCreatetime(System.currentTimeMillis());
-            moment.setContent( new String(content.getBytes("ISO-8859-1"), "UTF-8"));
+            moment.setContent(new String(content.getBytes("ISO-8859-1"), "UTF-8"));
             moment.setLocation(new String(location.getBytes("ISO-8859-1"), "UTF-8"));
             moment.setImageres(moment.arrayToString(imageres));
             moment.setVideores(moment.arrayToString(videores));
             momentService.saveMoment(moment);
-            stringHttpResponse = new HttpResponse<>(200,  "成功");
+            stringHttpResponse = new HttpResponse<>(200, "发送动态成功");
         } catch (ParameterException e) {
             e.printStackTrace();
             stringHttpResponse = new HttpResponse<>(400, e.getMessage());
@@ -124,11 +123,11 @@ public class UserMomentController {
     public Resource saveFile(String basePath, MultipartFile file, boolean isImageType) throws Exception {
         String fileName = file.getOriginalFilename();
         String fileType = fileName.substring(fileName.lastIndexOf('.'));
-        if(!isImageType&&!(".jpeg".equalsIgnoreCase(fileType) || ".png".equalsIgnoreCase(fileType) || ".jpg".equalsIgnoreCase(fileType))){
-            LogUtils.d(TAG,"image type:"+fileType);
-            return null ;
-        }else if(!(".mp4".equalsIgnoreCase(fileType))){
-            LogUtils.d(TAG,"video type:"+fileType);
+        if (!isImageType && !(".jpeg".equalsIgnoreCase(fileType) || ".png".equalsIgnoreCase(fileType) || ".jpg".equalsIgnoreCase(fileType))) {
+            LogUtils.d(TAG, "image type:" + fileType);
+            return null;
+        } else if (!(".mp4".equalsIgnoreCase(fileType))) {
+            LogUtils.d(TAG, "video type:" + fileType);
 //           return null;
         }
         SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
@@ -143,7 +142,7 @@ public class UserMomentController {
         fos.write(file.getBytes());
         fos.flush();
         fos.close();
-        System.out.println("requestFilePath:"+requestFilePath);
+        System.out.println("requestFilePath:" + requestFilePath);
         Resource resource = new Resource(1, requestFilePath);
         return resourceService.saveResource(resource);
 
