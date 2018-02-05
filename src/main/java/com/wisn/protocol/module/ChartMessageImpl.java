@@ -28,8 +28,7 @@ public class ChartMessageImpl implements ChartMessage {
         while (iterator.hasNext()) {
             Long next = iterator.next();
             if(next==message.getFromuserid()){
-
-                //continue;
+                continue;
             }
             SessionManager.sendMessage(next
                     , ModuleId.chatMessage, CmdId.ChartMessage.sendMessageToOne, ResponseCode.newMessage, message);

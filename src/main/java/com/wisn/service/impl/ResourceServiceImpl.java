@@ -4,10 +4,17 @@ import com.wisn.dao.ResourceDao;
 import com.wisn.entity.Resource;
 import com.wisn.exception.ParameterException;
 import com.wisn.service.ResourceService;
+import com.wisn.tools.Base64Utils;
 import com.wisn.tools.TextUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.io.UnsupportedEncodingException;
+import java.net.URI;
+import java.net.URL;
+import java.net.URLDecoder;
+import java.net.URLEncoder;
 
 
 @Service
@@ -28,6 +35,11 @@ public class ResourceServiceImpl implements ResourceService{
             throw new ParameterException("参数缺少");
         }
         resource.setCreatetime(System.currentTimeMillis());
+        try {
+            resource.setImagepath(URLEncoder.encode(resource.getImagepath(),"GBK"));
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
         long resourceId = resourceDao.insertResource(resource);
         System.out.println("saveResource:"+resourceId+ "resource: "+resource);
 //        resource.setResourceid(resourceId);

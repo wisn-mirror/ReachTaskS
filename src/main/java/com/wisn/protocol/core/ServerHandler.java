@@ -50,6 +50,7 @@ public class ServerHandler extends SimpleChannelInboundHandler<Request> {
                     result= (short) invoker.invoke(session, eMessage);
                 } else {
                     result= (short) invoker.invoke(eMessage);
+                    sendTestCallBack(session,eMessage);
                 }
                 LogUtils.d(TAG,"result:"+result);
             }
@@ -72,8 +73,24 @@ public class ServerHandler extends SimpleChannelInboundHandler<Request> {
         Response response = Response.valueOf(request);
         response.setResultCode(result);
         session.write(response);
-    }
+        // TODO: 2018/2/2 用于测试测回执消息
 
+    }
+    public void sendTestCallBack(Session session, EMessageMudule.EMessage eMessage){
+        EMessageMudule.EMessage build = EMessageMudule.EMessage.newBuilder()
+                .setReceivetime(System.currentTimeMillis())
+                .setMessageid(System.nanoTime())
+                .setTargetuserid(eMessage.getFromuserid())
+                .setFromuserid(eMessage.getTargetuserid())
+                .setMessagetype(0)
+                .setCreatetime(System.currentTimeMillis())
+                .setStatus(1)
+                .setToken("unknow")
+                .setContent("测试回复"+eMessage.getContent())
+                .build();
+        Response response = Response.valueOf(ModuleId.chatMessage,CmdId.ChartMessage.sendMessageToOne, ResponseCode.newMessage,build.toByteArray() );
+        session.write(response);
+    }
     @Override
     public void channelRegistered(ChannelHandlerContext ctx) throws Exception {
         super.channelRegistered(ctx);

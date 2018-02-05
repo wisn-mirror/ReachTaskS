@@ -1,6 +1,8 @@
 package com.wisn.entity;
 
 
+import com.wisn.tools.TextUtils;
+
 public class User {
     private long userid;
     private String nickname;
@@ -28,7 +30,17 @@ public class User {
         this.registertime = registertime;
         this.lastlogintime = lastlogintime;
     }
-
+    public void checkData(){
+        if(TextUtils.isEmpty(nickname)){
+            this.nickname="nickname"+System.currentTimeMillis();
+        }
+        if(TextUtils.isEmpty(nameid)){
+            this.nameid="userID"+System.currentTimeMillis();
+        }
+        if(TextUtils.isEmpty(iconurl)){
+            this.iconurl="files\\20180131\\5\\12\\533cff1b9a14467dac2a0fa7242f2b8a.jpg";
+        }
+    }
 
     public long getUserid() {
         return userid;
