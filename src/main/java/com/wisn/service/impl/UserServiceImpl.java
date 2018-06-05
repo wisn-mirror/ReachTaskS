@@ -6,7 +6,7 @@ import com.wisn.exception.*;
 import com.wisn.protocol.session.TokenEntity;
 import com.wisn.protocol.session.TokenManager;
 import com.wisn.service.UserService;
-import com.wisn.tools.AESUtils;
+import com.wisn.tools.AESUtil;
 import com.wisn.tools.DateUtils;
 import com.wisn.tools.FSUtils;
 import com.wisn.tools.TextUtils;
@@ -15,7 +15,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.Date;
 import java.util.List;
-import java.util.UUID;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -32,7 +31,7 @@ public class UserServiceImpl implements UserService {
         if (tempuser != null) {
             throw new AlreadyRegisteredException("已经注册");
         }
-        String aesEncryption = AESUtils.AesEncryption(user.getPassword());
+        String aesEncryption = AESUtil.encrypt(user.getPassword());
         user.setEncryption(aesEncryption);
         user.setRegistertime(System.currentTimeMillis());
         user.setLastlogintime(System.currentTimeMillis());
@@ -60,7 +59,7 @@ public class UserServiceImpl implements UserService {
         }
         User user = userDao.queryUserByPhoneNumber(phoneNumber);
         if (user != null) {
-            if (AESUtils.AesEncryption(password).equals(user.getEncryption()) && password.equals(user.getPassword())) {
+            if (AESUtil.encrypt(password).equals(user.getEncryption()) && password.equals(user.getPassword())) {
                 Date dateAfterHours = DateUtils.getDateAfterHours(new Date(), 8);
                 long expiredTime = dateAfterHours.getTime();
                 String token = FSUtils.getUUID();
@@ -118,9 +117,9 @@ public class UserServiceImpl implements UserService {
         }
         User tempuser = userDao.queryUserById(userid);
         if (tempuser != null) {
-            if (AESUtils.AesEncryption(oldPassword).equals(tempuser.getEncryption()) && oldPassword.equals(tempuser.getPassword())) {
+            if (AESUtil.encrypt(oldPassword).equals(tempuser.getEncryption()) && oldPassword.equals(tempuser.getPassword())) {
                 tempuser.setPassword(newPassword);
-                String aesEncryption = AESUtils.AesEncryption(newPassword);
+                String aesEncryption = AESUtil.encrypt(newPassword);
                 tempuser.setEncryption(aesEncryption);
                 int updatePassword = userDao.updatePassword(tempuser);
                 if (updatePassword != 1) throw new OperationException("操作失败");
