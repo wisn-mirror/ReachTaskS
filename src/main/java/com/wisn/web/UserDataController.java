@@ -212,7 +212,6 @@ public class UserDataController {
                 i++;
                 long size = file.getSize();
                 String fileName = file.getOriginalFilename();
-                System.out.println("file:" + next + " i:" + i + " fileName:" + fileName + " fileSize:" + size);
                 SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHHmmss");
                 FileOutputStream fos = new FileOutputStream(path + next + "_" + sdf.format(new Date()) + i + fileName.substring(fileName.lastIndexOf('.')));
                 fos.write(file.getBytes());
