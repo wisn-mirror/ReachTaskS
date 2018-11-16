@@ -4,12 +4,55 @@ import java.io.*;
 import java.text.DateFormat;
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Iterator;
-import java.util.Locale;
+import java.util.*;
 
 public class BuglyData {
     public static void main(String arg[]) {
+        try {
+            BufferedReader br = new BufferedReader(new FileReader("/Users/mac/IdeaProjects/ReachTaskS/src/buglyData.json"));
+            TreeMap<Double,Long> resutl=new TreeMap<Double,Long>(new Comparator<Double>(){
+
+
+                @Override
+                public int compare(Double o1, Double o2) {
+                    if(o1.doubleValue()==o2.doubleValue()){
+                        return 0;
+                    }else{
+                        return o1.doubleValue()>o2.doubleValue()?1:-1;
+
+                    }
+                }
+
+            });
+            Gson gson = new Gson();
+            VersionData dataBean = gson.fromJson(br, VersionData.class);
+            if (dataBean != null) {
+                Iterator<VersionData.Data> iterator = dataBean.data.iterator();
+                while (iterator.hasNext()) {
+                    VersionData.Data next = iterator.next();
+                    Long aLong = resutl.get(next.version);
+                    if(aLong==null){
+                        resutl.put(next.version,next.value);
+                    }else{
+                        resutl.replace(next.version,aLong+next.value);
+                    }
+                }
+            }
+            br.close();
+            Iterator<Map.Entry<Double, Long>> iterator1 = resutl.entrySet().iterator();
+            while (iterator1.hasNext()){
+                Map.Entry<Double, Long> next = iterator1.next();
+                String result = next.getKey() + " " + next.getValue();
+
+                System.out.println(result);
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void getBugly(){
         try {
             BufferedReader br = new BufferedReader(new FileReader("/Users/mac/IdeaProjects/ReachTaskS/src/buglyData.json"));
             BufferedWriter bw = new BufferedWriter(new FileWriter(new File("/Users/mac/IdeaProjects/ReachTaskS/src/data.txt")));

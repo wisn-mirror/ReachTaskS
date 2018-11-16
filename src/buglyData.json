@@ -1,339 +1,180 @@
 {
-  "status":200,
-  "msg":"ok",
-  "ret":{
-    "data":[
-      {
-        "appId":"834971cd4b",
-        "platformId":1,
-        "version":"-1",
-        "date":"20180922",
-        "type":"crash",
-        "crashNum":496,
-        "crashUser":273,
-        "accessNum":2062636,
-        "accessUser":35384
-      },
-      {
-        "appId":"834971cd4b",
-        "platformId":1,
-        "version":"-1",
-        "date":"20180923",
-        "type":"crash",
-        "crashNum":389,
-        "crashUser":279,
-        "accessNum":1946350,
-        "accessUser":34242
-      },
-      {
-        "appId":"834971cd4b",
-        "platformId":1,
-        "version":"-1",
-        "date":"20180924",
-        "type":"crash",
-        "crashNum":385,
-        "crashUser":253,
-        "accessNum":1953749,
-        "accessUser":33373
-      },
-      {
-        "appId":"834971cd4b",
-        "platformId":1,
-        "version":"-1",
-        "date":"20180925",
-        "type":"crash",
-        "crashNum":365,
-        "crashUser":249,
-        "accessNum":2008956,
-        "accessUser":32391
-      },
-      {
-        "appId":"834971cd4b",
-        "platformId":1,
-        "version":"-1",
-        "date":"20180926",
-        "type":"crash",
-        "crashNum":426,
-        "crashUser":262,
-        "accessNum":2182443,
-        "accessUser":32992
-      },
-      {
-        "appId":"834971cd4b",
-        "platformId":1,
-        "version":"-1",
-        "date":"20180927",
-        "type":"crash",
-        "crashNum":450,
-        "crashUser":287,
-        "accessNum":2116909,
-        "accessUser":32967
-      },
-      {
-        "appId":"834971cd4b",
-        "platformId":1,
-        "version":"-1",
-        "date":"20180928",
-        "type":"crash",
-        "crashNum":395,
-        "crashUser":289,
-        "accessNum":2084095,
-        "accessUser":32990
-      },
-      {
-        "appId":"834971cd4b",
-        "platformId":1,
-        "version":"-1",
-        "date":"20180929",
-        "type":"crash",
-        "crashNum":333,
-        "crashUser":259,
-        "accessNum":2063910,
-        "accessUser":32755
-      },
-      {
-        "appId":"834971cd4b",
-        "platformId":1,
-        "version":"-1",
-        "date":"20180930",
-        "type":"crash",
-        "crashNum":443,
-        "crashUser":290,
-        "accessNum":1986572,
-        "accessUser":32661
-      },
-      {
-        "appId":"834971cd4b",
-        "platformId":1,
-        "version":"-1",
-        "date":"20181001",
-        "type":"crash",
-        "crashNum":383,
-        "crashUser":292,
-        "accessNum":1892563,
-        "accessUser":32499
-      },
-      {
-        "appId":"834971cd4b",
-        "platformId":1,
-        "version":"-1",
-        "date":"20181002",
-        "type":"crash",
-        "crashNum":327,
-        "crashUser":256,
-        "accessNum":1765669,
-        "accessUser":30462
-      },
-      {
-        "appId":"834971cd4b",
-        "platformId":1,
-        "version":"-1",
-        "date":"20181003",
-        "type":"crash",
-        "crashNum":345,
-        "crashUser":268,
-        "accessNum":1712746,
-        "accessUser":29450
-      },
-      {
-        "appId":"834971cd4b",
-        "platformId":1,
-        "version":"-1",
-        "date":"20181004",
-        "type":"crash",
-        "crashNum":365,
-        "crashUser":221,
-        "accessNum":1735771,
-        "accessUser":29190
-      },
-      {
-        "appId":"834971cd4b",
-        "platformId":1,
-        "version":"-1",
-        "date":"20181005",
-        "type":"crash",
-        "crashNum":242,
-        "crashUser":196,
-        "accessNum":1770835,
-        "accessUser":29520
-      },
-      {
-        "appId":"834971cd4b",
-        "platformId":1,
-        "version":"-1",
-        "date":"20181006",
-        "type":"crash",
-        "crashNum":300,
-        "crashUser":243,
-        "accessNum":1760833,
-        "accessUser":29523
-      },
-      {
-        "appId":"834971cd4b",
-        "platformId":1,
-        "version":"-1",
-        "date":"20181007",
-        "type":"crash",
-        "crashNum":372,
-        "crashUser":259,
-        "accessNum":1784141,
-        "accessUser":29599
-      },
-      {
-        "appId":"834971cd4b",
-        "platformId":1,
-        "version":"-1",
-        "date":"20181008",
-        "type":"crash",
-        "crashNum":355,
-        "crashUser":237,
-        "accessNum":1880680,
-        "accessUser":31188
-      },
-      {
-        "appId":"834971cd4b",
-        "platformId":1,
-        "version":"-1",
-        "date":"20181009",
-        "type":"crash",
-        "crashNum":3792,
-        "crashUser":228,
-        "accessNum":2003452,
-        "accessUser":31611
-      },
-      {
-        "appId":"834971cd4b",
-        "platformId":1,
-        "version":"-1",
-        "date":"20181010",
-        "type":"crash",
-        "crashNum":4609,
-        "crashUser":240,
-        "accessNum":2060310,
-        "accessUser":31367
-      },
-      {
-        "appId":"834971cd4b",
-        "platformId":1,
-        "version":"-1",
-        "date":"20181011",
-        "type":"crash",
-        "crashNum":590,
-        "crashUser":284,
-        "accessNum":2001990,
-        "accessUser":31330
-      },
-      {
-        "appId":"834971cd4b",
-        "platformId":1,
-        "version":"-1",
-        "date":"20181012",
-        "type":"crash",
-        "crashNum":965,
-        "crashUser":248,
-        "accessNum":1971566,
-        "accessUser":31164
-      },
-      {
-        "appId":"834971cd4b",
-        "platformId":1,
-        "version":"-1",
-        "date":"20181013",
-        "type":"crash",
-        "crashNum":244,
-        "crashUser":197,
-        "accessNum":1919917,
-        "accessUser":31117
-      },
-      {
-        "appId":"834971cd4b",
-        "platformId":1,
-        "version":"-1",
-        "date":"20181014",
-        "type":"crash",
-        "crashNum":321,
-        "crashUser":215,
-        "accessNum":1953222,
-        "accessUser":31150
-      },
-      {
-        "appId":"834971cd4b",
-        "platformId":1,
-        "version":"-1",
-        "date":"20181015",
-        "type":"crash",
-        "crashNum":325,
-        "crashUser":244,
-        "accessNum":2016743,
-        "accessUser":31236
-      },
-      {
-        "appId":"834971cd4b",
-        "platformId":1,
-        "version":"-1",
-        "date":"20181016",
-        "type":"crash",
-        "crashNum":423,
-        "crashUser":275,
-        "accessNum":2156425,
-        "accessUser":31890
-      },
-      {
-        "appId":"834971cd4b",
-        "platformId":1,
-        "version":"-1",
-        "date":"20181017",
-        "type":"crash",
-        "crashNum":398,
-        "crashUser":251,
-        "accessNum":2141375,
-        "accessUser":32035
-      },
-      {
-        "appId":"834971cd4b",
-        "platformId":1,
-        "version":"-1",
-        "date":"20181018",
-        "type":"crash",
-        "crashNum":321,
-        "crashUser":235,
-        "accessNum":2153696,
-        "accessUser":32026
-      },
-      {
-        "appId":"834971cd4b",
-        "platformId":1,
-        "version":"-1",
-        "date":"20181019",
-        "type":"crash",
-        "crashNum":317,
-        "crashUser":238,
-        "accessNum":2199218,
-        "accessUser":32403
-      },
-      {
-        "appId":"834971cd4b",
-        "platformId":1,
-        "version":"-1",
-        "date":"20181020",
-        "type":"crash",
-        "crashNum":305,
-        "crashUser":238,
-        "accessNum":2209854,
-        "accessUser":32502
-      },
-      {
-        "appId":"834971cd4b",
-        "platformId":1,
-        "version":"-1",
-        "date":"20181021",
-        "type":"crash",
-        "crashNum":369,
-        "crashUser":232,
-        "accessNum":2104028,
-        "accessUser":32151
-      }
-    ],
-    "code":200
-  }
+  "data": [
+    {
+      "version": 4.3,
+      "value": 1
+    },
+    {
+      "version": 4.1,
+      "value": 8
+    },
+    {
+      "version": 4.4,
+      "value": 1
+    },
+    {
+      "version": 4.4,
+      "value": 20
+    },
+    {
+      "version": 8,
+      "value": 2
+    },
+    {
+      "version": 7,
+      "value": 17858
+    },
+    {
+      "version": 4,
+      "value": 1
+    },
+    {
+      "version": 5,
+      "value": 5
+    },
+    {
+      "version": 5.1,
+      "value": 7605
+    },
+    {
+      "version": 5.1,
+      "value": 39
+    },
+    {
+      "version": 2.3,
+      "value": 1
+    },
+    {
+      "version": 6,
+      "value": 126
+    },
+    {
+      "version": 7,
+      "value": 125
+    },
+    {
+      "version": 4.4,
+      "value": 703
+    },
+    {
+      "version": 7.1,
+      "value": 90
+    },
+    {
+      "version": 4.4,
+      "value": 1
+    },
+    {
+      "version": 6.0,
+      "value": 9995
+    },
+    {
+      "version": 8,
+      "value": 77
+    },
+    {
+      "version": 4.4,
+      "value": 1235
+    },
+    {
+      "version": 5,
+      "value": 56
+    },
+    {
+      "version": 8.1,
+      "value": 10
+    },
+    {
+      "version": 4.3,
+      "value": 1
+    },
+    {
+      "version": 5,
+      "value": 1123
+    },
+    {
+      "version": 2.3,
+      "value": 1
+    },
+    {
+      "version": 4.4,
+      "value": 2
+    },
+    {
+      "version": 7.1,
+      "value": 22136
+    },
+    {
+      "version": 5.0,
+      "value": 160
+    },
+    {
+      "version": 6,
+      "value": 16075
+    },
+    {
+      "version": 7.1,
+      "value": 12452
+    },
+    {
+      "version": 4.4,
+      "value": 1
+    },
+    {
+      "version": 5.1,
+      "value": 7128
+    },
+    {
+      "version": 8.1,
+      "value": 49625
+    },
+    {
+      "version": 6.1,
+      "value": 1
+    },
+    {
+      "version": 4.2,
+      "value": 5
+    },
+    {
+      "version": 5.3,
+      "value": 1
+    },
+    {
+      "version": 7,
+      "value": 124
+    },
+    {
+      "version": 9,
+      "value": 2481
+    },
+    {
+      "version": 4.2,
+      "value": 30
+    },
+    {
+      "version": 3.2,
+      "value": 1
+    },
+    {
+      "version": 8,
+      "value": 56273
+    },
+    {
+      "version": 8.1,
+      "value": 1
+    },
+    {
+      "version": 4.1,
+      "value": 1
+    },
+    {
+      "version": 4.3,
+      "value": 72
+    },
+    {
+      "version": 3.1,
+      "value": 1
+    }
+  ]
 }
