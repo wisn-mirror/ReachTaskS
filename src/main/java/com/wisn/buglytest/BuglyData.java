@@ -7,7 +7,18 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 
 public class BuglyData {
+//    public static final String number = "(\\d+)(x|X)(\\d+)";
+    public static final String number = "^[0-9]*$";
+
     public static void main(String arg[]) {
+        System.out.println("4321432".matches(number));
+        System.out.println("5324321".matches(number));
+        System.out.println("33n".matches(number));
+        System.out.println("汉子".matches(number));
+
+    }
+
+    public static void excuteExcelData(){
         try {
             BufferedReader br = new BufferedReader(new FileReader("/Users/mac/IdeaProjects/ReachTaskS/src/buglyData.json"));
             TreeMap<Double,Long> resutl=new TreeMap<Double,Long>(new Comparator<Double>(){
@@ -51,7 +62,6 @@ public class BuglyData {
             e.printStackTrace();
         }
     }
-
     public static void getBugly(){
         try {
             BufferedReader br = new BufferedReader(new FileReader("/Users/mac/IdeaProjects/ReachTaskS/src/buglyData.json"));
