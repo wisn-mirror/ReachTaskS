@@ -9,5 +9,20 @@ public class VersionData {
         public Double version;
         public long value;
 
+
+        @Override
+        public String toString() {
+            return "Data{" +
+                    "version=" + version +
+                    ", value=" + value +
+                    '}';
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "VersionData{" +
+                "data=" + data +
+                '}';
     }
 }

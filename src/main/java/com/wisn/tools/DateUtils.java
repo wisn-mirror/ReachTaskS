@@ -34,8 +34,7 @@ public class DateUtils {
         if (fmt == null || fmt.length() == 0) return null;
         SimpleDateFormat format = new SimpleDateFormat(fmt, Locale.CHINA);
         try {
-            Date parse = format.parse(str);
-            return parse;
+            return format.parse(str);
         } catch (ParseException e) {
             e.printStackTrace();
             return null;

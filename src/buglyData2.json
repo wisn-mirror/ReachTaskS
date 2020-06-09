@@ -1,0 +1,2054 @@
+{
+  "code": "0",
+  "message": "操作成功",
+  "errMsg": null,
+  "data": {
+    "dataList": [{
+      "templateCode": "h5_multipic",
+      "dataType": 1,
+      "staticData": {
+        "images": [{
+          "oriHeight": 550,
+          "desc": "图1",
+          "link": {
+            "status": true,
+            "data": "https://m.laiyifen.com/activity/queen/index",
+            "appData": "https://m.laiyifen.com/activity/queen/index",
+            "type": "自定义|https://m.laiyifen.com/activity/queen/index"
+          },
+          "src": "https://static5.laiyifen.com/files/cms/image/1548134637396_9531.jpg?iopcmd=convert&dst=jpg&Q=80",
+          "url": "https://m.laiyifen.com/activity/queen/index",
+          "oriWidth": 750
+        }],
+        "margin": 0
+      },
+      "moduleId": 1003090401000331,
+      "moduleData": null
+    }, {
+      "templateCode": "spacing",
+      "dataType": 1,
+      "staticData": {
+        "height": "25",
+        "color": "#ffffff"
+      },
+      "moduleId": 1024090401000581,
+      "moduleData": null
+    }, {
+      "templateCode": "h5_multipic",
+      "dataType": 1,
+      "staticData": {
+        "images": [{
+          "oriHeight": 150,
+          "desc": "图1",
+          "link": {
+            "status": true,
+            "data": "https://m.laiyifen.com/activity/queen/index",
+            "appData": "https://m.laiyifen.com/activity/queen/index",
+            "type": "自定义|https://m.laiyifen.com/activity/queen/index"
+          },
+          "src": "https://static3.laiyifen.com/files/cms/image/1548079040246_6827.gif",
+          "url": "https://m.laiyifen.com/activity/queen/index",
+          "oriWidth": 750
+        }],
+        "margin": 0
+      },
+      "moduleId": 1024090401000446,
+      "moduleData": null
+    }, {
+      "templateCode": "spacing",
+      "dataType": 1,
+      "staticData": {
+        "height": "25",
+        "color": "#ffffff"
+      },
+      "moduleId": 1024090401000584,
+      "moduleData": null
+    }, {
+      "templateCode": "ad_channel",
+      "dataType": 1,
+      "staticData": {
+        "ad_code": "ad_channel",
+        "pageCode": "APP_HOME"
+      },
+      "moduleId": 1024090401000461,
+      "moduleData": null
+    }, {
+      "templateCode": "h5_multipic",
+      "dataType": 1,
+      "staticData": {
+        "images": [{
+          "oriHeight": 117,
+          "desc": "图1",
+          "link": {},
+          "src": "https://static4.laiyifen.com/files/cms/image/1548166962503_4931.jpg?iopcmd=convert&dst=jpg&Q=80",
+          "url": "",
+          "oriWidth": 750
+        }],
+        "margin": 0
+      },
+      "moduleId": 1003090401000340,
+      "moduleData": null
+    }, {
+      "templateCode": "h5_multipic",
+      "dataType": 1,
+      "staticData": {
+        "images": [{
+          "oriHeight": 271,
+          "desc": "图1",
+          "link": {
+            "status": true,
+            "data": "https://m.laiyifen.com/detail.html?itemId=1008081400000136",
+            "appData": "lyf://productdetail?body={\"mpId\": 1008081400000136}",
+            "type": "商品|鸿运当头礼盒1186g"
+          },
+          "src": "https://static5.laiyifen.com/files/cms/image/1548162471895_3776.jpg?iopcmd=convert&dst=jpg&Q=80",
+          "url": "https://m.laiyifen.com/detail.html?itemId=1008081400000136",
+          "oriWidth": 750
+        }],
+        "margin": 0
+      },
+      "moduleId": 1024090401000458,
+      "moduleData": null
+    }, {
+      "templateCode": "h5_multipic",
+      "dataType": 1,
+      "staticData": {
+        "images": [{
+          "oriHeight": 282,
+          "desc": "图1",
+          "link": {
+            "status": true,
+            "data": "https://m.laiyifen.com/detail.html?itemId=1009081400000130",
+            "appData": "lyf://productdetail?body={\"mpId\": 1009081400000130}",
+            "type": "商品|招财进宝礼盒1440g"
+          },
+          "src": "https://static2.laiyifen.com/files/cms/image/1548162479481_4373.jpg?iopcmd=convert&dst=jpg&Q=80",
+          "url": "https://m.laiyifen.com/detail.html?itemId=1009081400000130",
+          "oriWidth": 750
+        }],
+        "margin": 0
+      },
+      "moduleId": 1003090401000346,
+      "moduleData": null
+    }, {
+      "templateCode": "h5_multipic",
+      "dataType": 1,
+      "staticData": {
+        "images": [{
+          "oriHeight": 279,
+          "desc": "图1",
+          "link": {
+            "status": true,
+            "data": "https://m.laiyifen.com/detail.html?itemId=1007081400000140",
+            "appData": "lyf://productdetail?body={\"mpId\": 1007081400000140}",
+            "type": "商品|福泰安康礼盒1111g"
+          },
+          "src": "https://static1.laiyifen.com/files/cms/image/1548162484874_3884.jpg?iopcmd=convert&dst=jpg&Q=80",
+          "url": "https://m.laiyifen.com/detail.html?itemId=1007081400000140",
+          "oriWidth": 750
+        }],
+        "margin": 0
+      },
+      "moduleId": 1003090401000343,
+      "moduleData": null
+    }, {
+      "templateCode": "h5_multipic",
+      "dataType": 1,
+      "staticData": {
+        "images": [{
+          "oriHeight": 282,
+          "desc": "图1",
+          "link": {
+            "status": true,
+            "data": "https://m.laiyifen.com/detail.html?itemId=1009081400000132",
+            "appData": "lyf://productdetail?body={\"mpId\": 1009081400000132}",
+            "type": "商品|神来气旺礼盒1217g"
+          },
+          "src": "https://static2.laiyifen.com/files/cms/image/1548163289902_2061.jpg?iopcmd=convert&dst=jpg&Q=80",
+          "url": "https://m.laiyifen.com/detail.html?itemId=1009081400000132",
+          "oriWidth": 750
+        }],
+        "margin": 0
+      },
+      "moduleId": 1003090401000349,
+      "moduleData": null
+    }, {
+      "templateCode": "h5_multipic",
+      "dataType": 1,
+      "staticData": {
+        "images": [{
+          "oriHeight": 274,
+          "desc": "图1",
+          "link": {
+            "status": true,
+            "data": "https://m.laiyifen.com/detail.html?itemId=1006085900000126",
+            "appData": "lyf://productdetail?body={\"mpId\": 1006085900000126}",
+            "type": "商品|金玉满堂（新版）1404g"
+          },
+          "src": "https://static4.laiyifen.com/files/cms/image/1548163289538_6321.jpg?iopcmd=convert&dst=jpg&Q=80",
+          "url": "https://m.laiyifen.com/detail.html?itemId=1006085900000126",
+          "oriWidth": 750
+        }],
+        "margin": 0
+      },
+      "moduleId": 1003090401000352,
+      "moduleData": null
+    }, {
+      "templateCode": "h5_multipic",
+      "dataType": 1,
+      "staticData": {
+        "images": [{
+          "oriHeight": 50,
+          "desc": "图1",
+          "link": {
+            "appUrl": "https://m.laiyifen.com/view/h5/1024084901000121.html",
+            "status": true,
+            "data": "https://m.laiyifen.com/view/h5/1024084901000121.html",
+            "appData": "https://m.laiyifen.com/view/h5/1024084901000121.html",
+            "type": "页面|年货礼盒"
+          },
+          "src": "https://static2.laiyifen.com/files/cms/image/1548166929764_1437.jpg?iopcmd=convert&dst=jpg&Q=80",
+          "url": "https://m.laiyifen.com/view/h5/1024084901000121.html",
+          "oriWidth": 750
+        }],
+        "margin": 0
+      },
+      "moduleId": 1024090500000329,
+      "moduleData": null
+    }, {
+      "templateCode": "h5_multipic",
+      "dataType": 1,
+      "staticData": {
+        "images": [{
+          "oriHeight": 247,
+          "desc": "图1",
+          "link": {},
+          "src": "https://static4.laiyifen.com/files/cms/image/1548080844793_8397.jpg?iopcmd=convert&dst=jpg&Q=80",
+          "url": "",
+          "oriWidth": 1564
+        }],
+        "margin": 0
+      },
+      "moduleId": 1024090401000467,
+      "moduleData": null
+    }, {
+      "templateCode": "h5_multipic",
+      "dataType": 1,
+      "staticData": {
+        "images": [{
+          "oriHeight": 274,
+          "desc": "图1",
+          "link": {
+            "status": true,
+            "data": "https://m.laiyifen.com/detail.html?itemId=1007020801014838",
+            "appData": "lyf://productdetail?body={\"mpId\": 1007020801014838}",
+            "type": "商品|4号精制猪肉脯200g"
+          },
+          "src": "https://static2.laiyifen.com/files/cms/image/1548163260657_5133.jpg?iopcmd=convert&dst=jpg&Q=80",
+          "url": "https://m.laiyifen.com/detail.html?itemId=1007020801014838",
+          "oriWidth": 750
+        }],
+        "margin": 0
+      },
+      "moduleId": 1024090401000473,
+      "moduleData": null
+    }, {
+      "templateCode": "index_cube",
+      "dataType": 1,
+      "staticData": {
+        "cdata": {
+          "width": "100%",
+          "children": [{
+            "imgUrl": "https://static4.laiyifen.com/files/cms/image/1548166262084_9565.jpg?iopcmd=convert&dst=jpg&Q=80",
+            "sort": "1",
+            "cssFloat": "left",
+            "appWidth": 375.0,
+            "width": "50%",
+            "link": {
+              "status": true,
+              "data": "https://m.laiyifen.com/detail.html?itemId=1008020801000956",
+              "appData": "lyf://productdetail?body={\"mpId\": 1008020801000956}",
+              "type": "商品|鸭翅根230g"
+            },
+            "appHeight": 220.0,
+            "purchase": 0,
+            "showp": "1"
+          }, {
+            "imgUrl": "https://static4.laiyifen.com/files/cms/image/1548166267205_5039.jpg?iopcmd=convert&dst=jpg&Q=80",
+            "sort": "2",
+            "cssFloat": "left",
+            "appWidth": 375.0,
+            "width": "50%",
+            "link": {
+              "status": true,
+              "data": "https://m.laiyifen.com/detail.html?itemId=1008055700000157",
+              "appData": "lyf://productdetail?body={\"mpId\": 1008055700000157}",
+              "type": "商品|量贩-天天坚果-活力派25gX5"
+            },
+            "appHeight": 220.0,
+            "purchase": 0,
+            "showp": "1"
+          }]
+        },
+        "layout": 0,
+        "moduleHigh": " ",
+        "moduleWidth": 750
+      },
+      "moduleId": 1003090401000358,
+      "moduleData": null
+    }, {
+      "templateCode": "index_cube",
+      "dataType": 1,
+      "staticData": {
+        "cdata": {
+          "width": "100%",
+          "children": [{
+            "imgUrl": "https://static2.laiyifen.com/files/cms/image/1548166300313_9917.jpg?iopcmd=convert&dst=jpg&Q=80",
+            "sort": "1",
+            "cssFloat": "left",
+            "appWidth": 375.0,
+            "width": "50%",
+            "link": {
+              "status": true,
+              "data": "https://m.laiyifen.com/detail.html?itemId=1008020801002578",
+              "appData": "lyf://productdetail?body={\"mpId\": 1008020801002578}",
+              "type": "商品|琥珀核桃仁200G"
+            },
+            "appHeight": 220.0,
+            "purchase": 0,
+            "showp": "1"
+          }, {
+            "imgUrl": "https://static2.laiyifen.com/files/cms/image/1548166306523_2069.jpg?iopcmd=convert&dst=jpg&Q=80",
+            "sort": "2",
+            "cssFloat": "left",
+            "appWidth": 375.0,
+            "width": "50%",
+            "link": {
+              "status": true,
+              "data": "https://m.laiyifen.com/detail.html?itemId=1044042600000011",
+              "appData": "lyf://productdetail?body={\"mpId\": 1044042600000011}",
+              "type": "商品|比利时扁桃仁薄脆饼干100g"
+            },
+            "appHeight": 220.0,
+            "purchase": 0,
+            "showp": "1"
+          }]
+        },
+        "layout": 0,
+        "moduleHigh": " ",
+        "moduleWidth": 750
+      },
+      "moduleId": 1024090401000482,
+      "moduleData": null
+    }, {
+      "templateCode": "index_cube",
+      "dataType": 1,
+      "staticData": {
+        "cdata": {
+          "width": "100%",
+          "children": [{
+            "imgUrl": "https://static4.laiyifen.com/files/cms/image/1548166727348_9602.jpg?iopcmd=convert&dst=jpg&Q=80",
+            "sort": "1",
+            "cssFloat": "left",
+            "appWidth": 375.0,
+            "width": "50%",
+            "link": {
+              "status": true,
+              "data": "https://m.laiyifen.com/detail.html?itemId=1007035900000003",
+              "appData": "lyf://productdetail?body={\"mpId\": 1007035900000003}",
+              "type": "商品|御品红枣一级252g"
+            },
+            "appHeight": 220.0,
+            "purchase": 0,
+            "showp": "1"
+          }, {
+            "imgUrl": "https://static3.laiyifen.com/files/cms/image/1548166730965_9900.jpg?iopcmd=convert&dst=jpg&Q=80",
+            "sort": "2",
+            "cssFloat": "left",
+            "appWidth": 375.0,
+            "width": "50%",
+            "link": {
+              "status": true,
+              "data": "https://m.laiyifen.com/detail.html?itemId=1008020801001786",
+              "appData": "lyf://productdetail?body={\"mpId\": 1008020801001786}",
+              "type": "商品|【亚米】缤纷水果干260g"
+            },
+            "appHeight": 220.0,
+            "purchase": 0,
+            "showp": "1"
+          }]
+        },
+        "layout": 0,
+        "moduleHeight": "",
+        "moduleHigh": " ",
+        "moduleWidth": 750
+      },
+      "moduleId": 1003090401000367,
+      "moduleData": null
+    }, {
+      "templateCode": "h5_multipic",
+      "dataType": 1,
+      "staticData": {
+        "images": [{
+          "oriHeight": 38,
+          "desc": "图1",
+          "link": {},
+          "src": "https://static2.laiyifen.com/files/cms/image/1548166354636_729.jpg?iopcmd=convert&dst=jpg&Q=80",
+          "url": "",
+          "oriWidth": 750
+        }],
+        "margin": 0
+      },
+      "moduleId": 1024090500000320,
+      "moduleData": null
+    }, {
+      "templateCode": "h5_multipic",
+      "dataType": 1,
+      "staticData": {
+        "images": [{
+          "oriHeight": 444,
+          "desc": "图1",
+          "link": {
+            "status": true,
+            "data": "https://m.laiyifen.com/detail.html?itemId=1008089400000040",
+            "appData": "lyf://productdetail?body={\"mpId\": 1008089400000040}",
+            "type": "商品|日本进口Calbee Jagabee卡乐比薯条三兄弟淡盐味黄油味薯条小吃零食两盒装80g/盒"
+          },
+          "src": "https://static4.laiyifen.com/files/cms/image/1548168200037_6508.jpg?iopcmd=convert&dst=jpg&Q=80",
+          "url": "https://m.laiyifen.com/detail.html?itemId=1008089400000040",
+          "oriWidth": 750
+        }],
+        "margin": 0
+      },
+      "moduleId": 1003090500000149,
+      "moduleData": null
+    }, {
+      "templateCode": "h5_multipic",
+      "dataType": 1,
+      "staticData": {
+        "images": [{
+          "oriHeight": 247,
+          "desc": "图1",
+          "link": {},
+          "src": "https://static3.laiyifen.com/files/cms/image/1548080947270_5407.jpg?iopcmd=convert&dst=jpg&Q=80",
+          "url": "",
+          "oriWidth": 1564
+        }],
+        "margin": 0
+      },
+      "moduleId": 1003090401000364,
+      "moduleData": null
+    }, {
+      "templateCode": "h5_multipic",
+      "dataType": 1,
+      "staticData": {
+        "images": [{
+          "oriHeight": 277,
+          "desc": "图1",
+          "link": {
+            "status": true,
+            "data": "https://m.laiyifen.com/detail.html?itemId=1007020801002055",
+            "appData": "lyf://productdetail?body={\"mpId\": 1007020801002055}",
+            "type": "商品|碧根果仁250g"
+          },
+          "src": "https://static1.laiyifen.com/files/cms/image/1548166387942_493.jpg?iopcmd=convert&dst=jpg&Q=80",
+          "url": "https://m.laiyifen.com/detail.html?itemId=1007020801002055",
+          "oriWidth": 750
+        }],
+        "margin": 0
+      },
+      "moduleId": 1003090401000373,
+      "moduleData": null
+    }, {
+      "templateCode": "index_cube",
+      "dataType": 1,
+      "staticData": {
+        "cdata": {
+          "width": "100%",
+          "children": [{
+            "imgUrl": "https://static1.laiyifen.com/files/cms/image/1548166401377_5342.jpg?iopcmd=convert&dst=jpg&Q=80",
+            "sort": "1",
+            "cssFloat": "left",
+            "appWidth": 375.0,
+            "width": "50%",
+            "link": {
+              "status": true,
+              "data": "https://m.laiyifen.com/detail.html?itemId=1008061100000013",
+              "appData": "lyf://productdetail?body={\"mpId\": 1008061100000013}",
+              "type": "商品|黑丫鸭肫125g"
+            },
+            "appHeight": 220.0,
+            "purchase": 0,
+            "showp": "1"
+          }, {
+            "imgUrl": "https://static1.laiyifen.com/files/cms/image/1548166408974_4661.jpg?iopcmd=convert&dst=jpg&Q=80",
+            "sort": "2",
+            "cssFloat": "left",
+            "appWidth": 375.0,
+            "width": "50%",
+            "link": {
+              "status": true,
+              "data": "https://m.laiyifen.com/detail.html?itemId=1044035500000017",
+              "appData": "lyf://productdetail?body={\"mpId\": 1044035500000017}",
+              "type": "商品|手撕酵母面包1kg"
+            },
+            "appHeight": 220.0,
+            "purchase": 0,
+            "showp": "1"
+          }]
+        },
+        "layout": 0,
+        "moduleHigh": " ",
+        "moduleWidth": 750
+      },
+      "moduleId": 1003090401000337,
+      "moduleData": null
+    }, {
+      "templateCode": "index_cube",
+      "dataType": 1,
+      "staticData": {
+        "cdata": {
+          "width": "100%",
+          "children": [{
+            "imgUrl": "https://static3.laiyifen.com/files/cms/image/1548166416222_7359.jpg?iopcmd=convert&dst=jpg&Q=80",
+            "sort": "1",
+            "cssFloat": "left",
+            "appWidth": 375.0,
+            "width": "50%",
+            "link": {
+              "status": true,
+              "data": "https://m.laiyifen.com/detail.html?itemId=1007026300000040",
+              "appData": "lyf://productdetail?body={\"mpId\": 1007026300000040}",
+              "type": "商品|麦胚黄油蛋糕260g"
+            },
+            "appHeight": 220.0,
+            "purchase": 0,
+            "showp": "1"
+          }, {
+            "imgUrl": "https://static3.laiyifen.com/files/cms/image/1548166419628_4278.jpg?iopcmd=convert&dst=jpg&Q=80",
+            "sort": "2",
+            "cssFloat": "left",
+            "appWidth": 375.0,
+            "width": "50%",
+            "link": {
+              "status": true,
+              "data": "https://m.laiyifen.com/detail.html?itemId=1008047700000049",
+              "appData": "lyf://productdetail?body={\"mpId\": 1008047700000049}",
+              "type": "商品|提子夹心蛋糕260g"
+            },
+            "appHeight": 220.0,
+            "purchase": 0,
+            "showp": "1"
+          }]
+        },
+        "layout": 0,
+        "moduleHigh": " ",
+        "moduleWidth": 750
+      },
+      "moduleId": 1003090401000376,
+      "moduleData": null
+    }, {
+      "templateCode": "h5_multipic",
+      "dataType": 1,
+      "staticData": {
+        "images": [{
+          "oriHeight": 33,
+          "desc": "图1",
+          "link": {},
+          "src": "https://static4.laiyifen.com/files/cms/image/1548166481694_5755.jpg?iopcmd=convert&dst=jpg&Q=80",
+          "url": "",
+          "oriWidth": 750
+        }],
+        "margin": 0
+      },
+      "moduleId": 1003090500000208,
+      "moduleData": null
+    }, {
+      "templateCode": "h5_multipic",
+      "dataType": 1,
+      "staticData": {
+        "images": [{
+          "oriHeight": 127,
+          "desc": "图1",
+          "link": {},
+          "src": "https://static4.laiyifen.com/files/cms/image/1548166472876_7391.jpg?iopcmd=convert&dst=jpg&Q=80",
+          "url": "",
+          "oriWidth": 750
+        }],
+        "margin": 0
+      },
+      "moduleId": 1024090401000488,
+      "moduleData": null
+    }, {
+      "templateCode": "h5_multipic",
+      "dataType": 1,
+      "staticData": {
+        "images": [{
+          "oriHeight": 352,
+          "desc": "图1",
+          "link": {
+            "appUrl": "https://m.laiyifen.com/view/h5/1024084901000121.html?1548081199032",
+            "status": true,
+            "data": "https://m.laiyifen.com/view/h5/1024084901000121.html?1548081199032",
+            "appData": "https://m.laiyifen.com/view/h5/1024084901000121.html?1548081199032",
+            "type": "自定义|https://m.laiyifen.com/view/h5/1024084901000121.html?1548081199032"
+          },
+          "src": "https://static4.laiyifen.com/files/cms/image/1548166462383_8861.jpg?iopcmd=convert&dst=jpg&Q=80",
+          "url": "https://m.laiyifen.com/view/h5/1024084901000121.html?1548081199032",
+          "oriWidth": 750
+        }],
+        "margin": 0
+      },
+      "moduleId": 1024090401000575,
+      "moduleData": null
+    }, {
+      "templateCode": "index_cube",
+      "dataType": 1,
+      "staticData": {
+        "cdata": {
+          "width": "100%",
+          "children": [{
+            "imgUrl": "https://static3.laiyifen.com/files/cms/image/1548166430672_5530.jpg?iopcmd=convert&dst=jpg&Q=80",
+            "sort": "1",
+            "cssFloat": "left",
+            "appWidth": 250.0,
+            "width": "33.33%",
+            "link": {
+              "status": true,
+              "data": "http://m.laiyifen.com/flashSales/index.html",
+              "appData": "http://m.laiyifen.com/flashSales/index.html",
+              "type": "自定义|http://m.laiyifen.com/flashSales/index.html"
+            },
+            "appHeight": 360.0,
+            "purchase": 0
+          }, {
+            "imgUrl": "https://static4.laiyifen.com/files/cms/image/1548166434827_76.jpg?iopcmd=convert&dst=jpg&Q=80",
+            "sort": "2",
+            "cssFloat": "left",
+            "appWidth": 250.0,
+            "width": "33.33%",
+            "link": {
+              "appUrl": "lyf://cmspage?body={\"pageId\":1024089301000129}",
+              "status": true,
+              "data": "https://m.laiyifen.com/view/h5/1024089301000129.html?1548075874978",
+              "appData": "https://m.laiyifen.com/view/h5/1024089301000129.html?1548075874978",
+              "type": "自定义|https://m.laiyifen.com/view/h5/1024089301000129.html?1548075874978"
+            },
+            "appHeight": 360.0,
+            "purchase": 0
+          }, {
+            "imgUrl": "https://static3.laiyifen.com/files/cms/image/1548166438342_1743.jpg?iopcmd=convert&dst=jpg&Q=80",
+            "sort": "3",
+            "cssFloat": "left",
+            "appWidth": 250.0,
+            "width": "33.33%",
+            "link": {
+              "appUrl": "lyf://cmspage?body={\"pageId\":1003089901000011}",
+              "status": true,
+              "data": "https://m.laiyifen.com/view/h5/1003089901000011.html?1548075841236",
+              "appData": "https://m.laiyifen.com/view/h5/1003089901000011.html?1548075841236",
+              "type": "自定义|https://m.laiyifen.com/view/h5/1003089901000011.html?1548075841236"
+            },
+            "appHeight": 360.0,
+            "purchase": 0
+          }]
+        },
+        "layout": 2,
+        "moduleHigh": " ",
+        "moduleWidth": 750
+      },
+      "moduleId": 1024090401000491,
+      "moduleData": null
+    }, {
+      "templateCode": "h5_multipic",
+      "dataType": 1,
+      "staticData": {
+        "images": [{
+          "oriHeight": 40,
+          "desc": "图1",
+          "link": {},
+          "src": "https://static2.laiyifen.com/files/cms/image/1548166457235_8741.jpg?iopcmd=convert&dst=jpg&Q=80",
+          "url": "",
+          "oriWidth": 750
+        }],
+        "margin": 0
+      },
+      "moduleId": 1024090500000323,
+      "moduleData": null
+    }, {
+      "templateCode": "h5_multipic",
+      "dataType": 1,
+      "staticData": {
+        "images": [{
+          "oriHeight": 222,
+          "desc": "图1",
+          "link": {},
+          "src": "https://static3.laiyifen.com/files/cms/image/1548079054949_6459.jpg?iopcmd=convert&dst=jpg&Q=80",
+          "url": "",
+          "oriWidth": 1564
+        }],
+        "margin": 0
+      },
+      "moduleId": 1024090401000449,
+      "moduleData": null
+    }, {
+      "templateCode": "h5_multipic",
+      "dataType": 1,
+      "staticData": {
+        "images": [{
+          "oriHeight": 274,
+          "desc": "图1",
+          "link": {
+            "status": true,
+            "data": "https://m.laiyifen.com/detail.html?itemId=1007020801001573",
+            "appData": "lyf://productdetail?body={\"mpId\": 1007020801001573}",
+            "type": "商品|香辣味牛肉片68g"
+          },
+          "src": "https://static3.laiyifen.com/files/cms/image/1548164528400_4518.jpg?iopcmd=convert&dst=jpg&Q=80",
+          "url": "https://m.laiyifen.com/detail.html?itemId=1007020801001573",
+          "oriWidth": 750
+        }],
+        "margin": 0
+      },
+      "moduleId": 1003090401000361,
+      "moduleData": null
+    }, {
+      "templateCode": "index_cube",
+      "dataType": 1,
+      "staticData": {
+        "cdata": {
+          "width": "100%",
+          "children": [{
+            "imgUrl": "https://static2.laiyifen.com/files/cms/image/1548163343491_1074.jpg?iopcmd=convert&dst=jpg&Q=80",
+            "sort": "1",
+            "cssFloat": "left",
+            "appWidth": 250.0,
+            "width": "33.33%",
+            "link": {
+              "status": true,
+              "data": "https://m.laiyifen.com/detail.html?itemId=1007074500000054",
+              "appData": "lyf://productdetail?body={\"mpId\": 1007074500000054}",
+              "type": "商品|量贩-香酥小黄鱼125g（电商装）*2"
+            },
+            "appHeight": 360.0,
+            "purchase": 0
+          }, {
+            "imgUrl": "https://static5.laiyifen.com/files/cms/image/1548163348641_2212.jpg?iopcmd=convert&dst=jpg&Q=80",
+            "sort": "2",
+            "cssFloat": "left",
+            "appWidth": 250.0,
+            "width": "33.33%",
+            "link": {
+              "status": true,
+              "data": "https://m.laiyifen.com/detail.html?itemId=1006028200000020",
+              "appData": "lyf://productdetail?body={\"mpId\": 1006028200000020}",
+              "type": "商品|脱骨鸭掌（辐照食品）118g"
+            },
+            "appHeight": 360.0,
+            "purchase": 0
+          }, {
+            "imgUrl": "https://static1.laiyifen.com/files/cms/image/1548163355664_7321.jpg?iopcmd=convert&dst=jpg&Q=80",
+            "sort": "3",
+            "cssFloat": "left",
+            "appWidth": 250.0,
+            "width": "33.33%",
+            "link": {
+              "status": true,
+              "data": "https://m.laiyifen.com/detail.html?itemId=1006033900000018",
+              "appData": "lyf://productdetail?body={\"mpId\": 1006033900000018}",
+              "type": "商品|鸭肫130g"
+            },
+            "appHeight": 360.0,
+            "purchase": 0
+          }]
+        },
+        "layout": 2,
+        "moduleHigh": " ",
+        "moduleWidth": 750
+      },
+      "moduleId": 1024090401000452,
+      "moduleData": null
+    }, {
+      "templateCode": "index_cube",
+      "dataType": 1,
+      "staticData": {
+        "cdata": {
+          "width": "100%",
+          "children": [{
+            "imgUrl": "https://static1.laiyifen.com/files/cms/image/1548166495375_1913.jpg?iopcmd=convert&dst=jpg&Q=80",
+            "sort": "1",
+            "cssFloat": "left",
+            "appWidth": 250.0,
+            "width": "33.33%",
+            "link": {
+              "status": true,
+              "data": "https://m.laiyifen.com/detail.html?itemId=1008020801001356",
+              "appData": "lyf://productdetail?body={\"mpId\": 1008020801001356}",
+              "type": "商品|香辣鸭脖250g"
+            },
+            "appHeight": 360.0,
+            "purchase": 0
+          }, {
+            "imgUrl": "https://static1.laiyifen.com/files/cms/image/1548166498913_1570.jpg?iopcmd=convert&dst=jpg&Q=80",
+            "sort": "2",
+            "cssFloat": "left",
+            "appWidth": 250.0,
+            "width": "33.33%",
+            "link": {
+              "status": true,
+              "data": "https://m.laiyifen.com/detail.html?itemId=1007020801002685",
+              "appData": "lyf://productdetail?body={\"mpId\": 1007020801002685}",
+              "type": "商品|川香牛肉条150g"
+            },
+            "appHeight": 360.0,
+            "purchase": 0
+          }, {
+            "imgUrl": "https://static2.laiyifen.com/files/cms/image/1548166501878_5494.jpg?iopcmd=convert&dst=jpg&Q=80",
+            "sort": "3",
+            "cssFloat": "left",
+            "appWidth": 250.0,
+            "width": "33.33%",
+            "link": {
+              "status": true,
+              "data": "https://m.laiyifen.com/detail.html?itemId=1044061100000024",
+              "appData": "lyf://productdetail?body={\"mpId\": 1044061100000024}",
+              "type": "商品|虾宝贝（辣味）50g（学院风）"
+            },
+            "appHeight": 360.0,
+            "purchase": 0
+          }]
+        },
+        "layout": 2,
+        "moduleHigh": " ",
+        "moduleWidth": 750
+      },
+      "moduleId": 1024090401000455,
+      "moduleData": null
+    }, {
+      "templateCode": "h5_multipic",
+      "dataType": 1,
+      "staticData": {
+        "images": [{
+          "oriHeight": 117,
+          "desc": "图1",
+          "link": {},
+          "src": "https://static1.laiyifen.com/files/cms/image/1548166514879_5305.jpg?iopcmd=convert&dst=jpg&Q=80",
+          "url": "",
+          "oriWidth": 750
+        }],
+        "margin": 0
+      },
+      "moduleId": 1024090401000497,
+      "moduleData": null
+    }, {
+      "templateCode": "h5_multipic",
+      "dataType": 1,
+      "staticData": {
+        "images": [{
+          "oriHeight": 271,
+          "desc": "图1",
+          "link": {
+            "status": true,
+            "data": "https://m.laiyifen.com/detail.html?itemId=1008090500000002",
+            "appData": "lyf://productdetail?body={\"mpId\": 1008090500000002}",
+            "type": "商品|量贩-瓜蒌籽130g*2"
+          },
+          "src": "https://static4.laiyifen.com/files/cms/image/1548166519884_9924.jpg?iopcmd=convert&dst=jpg&Q=80",
+          "url": "https://m.laiyifen.com/detail.html?itemId=1008090500000002",
+          "oriWidth": 750
+        }],
+        "margin": 0
+      },
+      "moduleId": 1003090401000394,
+      "moduleData": null
+    }, {
+      "templateCode": "index_cube",
+      "dataType": 1,
+      "staticData": {
+        "cdata": {
+          "width": "100%",
+          "children": [{
+            "imgUrl": "https://static4.laiyifen.com/files/cms/image/1548166541657_3100.jpg?iopcmd=convert&dst=jpg&Q=80",
+            "sort": "1",
+            "cssFloat": "left",
+            "appWidth": 250.0,
+            "width": "33.33%",
+            "link": {
+              "status": true,
+              "data": "https://m.laiyifen.com/detail.html?itemId=1044045200000016",
+              "appData": "lyf://productdetail?body={\"mpId\": 1044045200000016}",
+              "type": "商品|纯真好仁-腰果仁35g"
+            },
+            "appHeight": 360.0,
+            "purchase": 0
+          }, {
+            "imgUrl": "https://static5.laiyifen.com/files/cms/image/1548166553708_1417.jpg?iopcmd=convert&dst=jpg&Q=80",
+            "sort": "2",
+            "cssFloat": "left",
+            "appWidth": 250.0,
+            "width": "33.33%",
+            "link": {
+              "status": true,
+              "data": "https://m.laiyifen.com/detail.html?itemId=1006034000000006",
+              "appData": "lyf://productdetail?body={\"mpId\": 1006034000000006}",
+              "type": "商品|碧根果150g"
+            },
+            "appHeight": 360.0,
+            "purchase": 0
+          }, {
+            "imgUrl": "https://static2.laiyifen.com/files/cms/image/1548166567712_7474.jpg?iopcmd=convert&dst=jpg&Q=80",
+            "sort": "3",
+            "cssFloat": "left",
+            "appWidth": 250.0,
+            "width": "33.33%",
+            "link": {
+              "status": true,
+              "data": "https://m.laiyifen.com/detail.html?itemId=1008055700000135",
+              "appData": "lyf://productdetail?body={\"mpId\": 1008055700000135}",
+              "type": "商品|量贩-亚米蜂蜜黄油扁桃仁35gX2"
+            },
+            "appHeight": 360.0,
+            "purchase": 0
+          }]
+        },
+        "layout": 2,
+        "moduleHigh": " ",
+        "moduleWidth": 750
+      },
+      "moduleId": 1024090401000503,
+      "moduleData": null
+    }, {
+      "templateCode": "h5_multipic",
+      "dataType": 1,
+      "staticData": {
+        "images": [{
+          "oriHeight": 106,
+          "desc": "图1",
+          "link": {},
+          "src": "https://static3.laiyifen.com/files/cms/image/1548166586615_7541.jpg?iopcmd=convert&dst=jpg&Q=80",
+          "url": "",
+          "oriWidth": 750
+        }],
+        "margin": 0
+      },
+      "moduleId": 1003090401000397,
+      "moduleData": null
+    }, {
+      "templateCode": "h5_multipic",
+      "dataType": 1,
+      "staticData": {
+        "images": [{
+          "oriHeight": 274,
+          "desc": "图1",
+          "link": {
+            "status": true,
+            "data": "https://m.laiyifen.com/detail.html?itemId=1006035400000029",
+            "appData": "lyf://productdetail?body={\"mpId\": 1006035400000029}",
+            "type": "商品|日式梅饼118g"
+          },
+          "src": "https://static4.laiyifen.com/files/cms/image/1548163406035_5211.jpg?iopcmd=convert&dst=jpg&Q=80",
+          "url": "https://m.laiyifen.com/detail.html?itemId=1006035400000029",
+          "oriWidth": 750
+        }],
+        "margin": 0
+      },
+      "moduleId": 1024090401000506,
+      "moduleData": null
+    }, {
+      "templateCode": "index_cube",
+      "dataType": 1,
+      "staticData": {
+        "cdata": {
+          "width": "100%",
+          "children": [{
+            "imgUrl": "https://static4.laiyifen.com/files/cms/image/1548166782167_9901.jpg?iopcmd=convert&dst=jpg&Q=80",
+            "sort": "1",
+            "cssFloat": "left",
+            "appWidth": 250.0,
+            "width": "33.33%",
+            "link": {
+              "status": true,
+              "data": "https://m.laiyifen.com/detail.html?itemId=1009047800000088",
+              "appData": "lyf://productdetail?body={\"mpId\": 1009047800000088}",
+              "type": "商品|素清梅245g"
+            },
+            "appHeight": 360.0,
+            "purchase": 0
+          }, {
+            "imgUrl": "https://static4.laiyifen.com/files/cms/image/1548166786701_7769.jpg?iopcmd=convert&dst=jpg&Q=80",
+            "sort": "2",
+            "cssFloat": "left",
+            "appWidth": 250.0,
+            "width": "33.33%",
+            "link": {
+              "status": true,
+              "data": "https://m.laiyifen.com/detail.html?itemId=1008073100000117",
+              "appData": "lyf://productdetail?body={\"mpId\": 1008073100000117}",
+              "type": "商品|南瓜子仁椰子片58g"
+            },
+            "appHeight": 360.0,
+            "purchase": 0
+          }, {
+            "imgUrl": "https://static5.laiyifen.com/files/cms/image/1548166794314_9546.jpg?iopcmd=convert&dst=jpg&Q=80",
+            "sort": "3",
+            "cssFloat": "left",
+            "appWidth": 250.0,
+            "width": "33.33%",
+            "link": {
+              "status": true,
+              "data": "https://m.laiyifen.com/detail.html?itemId=1085046400000088",
+              "appData": "lyf://productdetail?body={\"mpId\": 1085046400000088}",
+              "type": "商品|宁夏枸杞干188g"
+            },
+            "appHeight": 360.0,
+            "purchase": 0
+          }]
+        },
+        "layout": 2,
+        "moduleHigh": " ",
+        "moduleWidth": 750
+      },
+      "moduleId": 1003090401000400,
+      "moduleData": null
+    }, {
+      "templateCode": "index_cube",
+      "dataType": 1,
+      "staticData": {
+        "cdata": {
+          "width": "100%",
+          "children": [{
+            "imgUrl": "https://static4.laiyifen.com/files/cms/image/1548166595246_5770.jpg?iopcmd=convert&dst=jpg&Q=80",
+            "sort": "1",
+            "cssFloat": "left",
+            "appWidth": 250.0,
+            "width": "33.33%",
+            "link": {
+              "status": true,
+              "data": "https://m.laiyifen.com/detail.html?itemId=1007035900000001",
+              "appData": "lyf://productdetail?body={\"mpId\": 1007035900000001}",
+              "type": "商品|无核陈皮梅118g"
+            },
+            "appHeight": 360.0,
+            "purchase": 0
+          }, {
+            "imgUrl": "https://static1.laiyifen.com/files/cms/image/1548166598556_8673.jpg?iopcmd=convert&dst=jpg&Q=80",
+            "sort": "2",
+            "cssFloat": "left",
+            "appWidth": 250.0,
+            "width": "33.33%",
+            "link": {
+              "status": true,
+              "data": "https://m.laiyifen.com/detail.html?itemId=1008020801005188",
+              "appData": "lyf://productdetail?body={\"mpId\": 1008020801005188}",
+              "type": "商品|桂花加应子318g"
+            },
+            "appHeight": 360.0,
+            "purchase": 0
+          }, {
+            "imgUrl": "https://static4.laiyifen.com/files/cms/image/1548166602274_9022.jpg?iopcmd=convert&dst=jpg&Q=80",
+            "sort": "3",
+            "cssFloat": "left",
+            "appWidth": 250.0,
+            "width": "33.33%",
+            "link": {
+              "status": true,
+              "data": "https://m.laiyifen.com/detail.html?itemId=1006020801001676",
+              "appData": "lyf://productdetail?body={\"mpId\": 1006020801001676}",
+              "type": "商品|榴莲冻干40g"
+            },
+            "appHeight": 360.0,
+            "purchase": 0
+          }]
+        },
+        "layout": 2,
+        "moduleHigh": " ",
+        "moduleWidth": 750
+      },
+      "moduleId": 1024090401000509,
+      "moduleData": null
+    }, {
+      "templateCode": "h5_multipic",
+      "dataType": 1,
+      "staticData": {
+        "images": [{
+          "oriHeight": 114,
+          "desc": "图1",
+          "link": {},
+          "src": "https://static1.laiyifen.com/files/cms/image/1548166620877_7946.jpg?iopcmd=convert&dst=jpg&Q=80",
+          "url": "",
+          "oriWidth": 750
+        }],
+        "margin": 0
+      },
+      "moduleId": 1024090401000512,
+      "moduleData": null
+    }, {
+      "templateCode": "h5_multipic",
+      "dataType": 1,
+      "staticData": {
+        "images": [{
+          "oriHeight": 271,
+          "desc": "图1",
+          "link": {
+            "status": true,
+            "data": "https://m.laiyifen.com/detail.html?itemId=1008020801012964",
+            "appData": "lyf://productdetail?body={\"mpId\": 1008020801012964}",
+            "type": "商品|量贩-杂粮脆饼（黑四宝风味）160gX2"
+          },
+          "src": "https://static4.laiyifen.com/files/cms/image/1548166625774_4516.jpg?iopcmd=convert&dst=jpg&Q=80",
+          "url": "https://m.laiyifen.com/detail.html?itemId=1008020801012964",
+          "oriWidth": 750
+        }],
+        "margin": 0
+      },
+      "moduleId": 1024090401000515,
+      "moduleData": null
+    }, {
+      "templateCode": "index_cube",
+      "dataType": 1,
+      "staticData": {
+        "cdata": {
+          "width": "100%",
+          "children": [{
+            "imgUrl": "https://static2.laiyifen.com/files/cms/image/1548166635070_8255.jpg?iopcmd=convert&dst=jpg&Q=80",
+            "sort": "1",
+            "cssFloat": "left",
+            "appWidth": 250.0,
+            "width": "33.33%",
+            "link": {
+              "status": true,
+              "data": "https://m.laiyifen.com/detail.html?itemId=1009053400000012",
+              "appData": "lyf://productdetail?body={\"mpId\": 1009053400000012}",
+              "type": "商品|杏仁薄脆270g"
+            },
+            "appHeight": 360.0,
+            "purchase": 0
+          }, {
+            "imgUrl": "https://static2.laiyifen.com/files/cms/image/1548166639819_1903.jpg?iopcmd=convert&dst=jpg&Q=80",
+            "sort": "2",
+            "cssFloat": "left",
+            "appWidth": 250.0,
+            "width": "33.33%",
+            "link": {
+              "status": true,
+              "data": "https://m.laiyifen.com/detail.html?itemId=1044066100000022",
+              "appData": "lyf://productdetail?body={\"mpId\": 1044066100000022}",
+              "type": "商品|牛玛玛（原味）250g"
+            },
+            "appHeight": 360.0,
+            "purchase": 0
+          }, {
+            "imgUrl": "https://static5.laiyifen.com/files/cms/image/1548166643439_4535.jpg?iopcmd=convert&dst=jpg&Q=80",
+            "sort": "3",
+            "cssFloat": "left",
+            "appWidth": 250.0,
+            "width": "33.33%",
+            "link": {
+              "status": true,
+              "data": "https://m.laiyifen.com/detail.html?itemId=1006020801001974",
+              "appData": "lyf://productdetail?body={\"mpId\": 1006020801001974}",
+              "type": "商品|蟹香豆瓣165g"
+            },
+            "appHeight": 360.0,
+            "purchase": 0
+          }]
+        },
+        "layout": 2,
+        "moduleHigh": " ",
+        "moduleWidth": 750
+      },
+      "moduleId": 1024090401000518,
+      "moduleData": null
+    }, {
+      "templateCode": "index_cube",
+      "dataType": 1,
+      "staticData": {
+        "cdata": {
+          "width": "100%",
+          "children": [{
+            "imgUrl": "https://static5.laiyifen.com/files/cms/image/1548166647994_2462.jpg?iopcmd=convert&dst=jpg&Q=80",
+            "sort": "1",
+            "cssFloat": "left",
+            "appWidth": 250.0,
+            "width": "33.33%",
+            "link": {
+              "status": true,
+              "data": "https://m.laiyifen.com/detail.html?itemId=1008020801001270",
+              "appData": "lyf://productdetail?body={\"mpId\": 1008020801001270}",
+              "type": "商品|爆米花(焦糖味)150g"
+            },
+            "appHeight": 360.0,
+            "purchase": 0
+          }, {
+            "imgUrl": "https://static5.laiyifen.com/files/cms/image/1548166651157_8346.jpg?iopcmd=convert&dst=jpg&Q=80",
+            "sort": "2",
+            "cssFloat": "left",
+            "appWidth": 250.0,
+            "width": "33.33%",
+            "link": {
+              "status": true,
+              "data": "https://m.laiyifen.com/detail.html?itemId=1085066200000004",
+              "appData": "lyf://productdetail?body={\"mpId\": 1085066200000004}",
+              "type": "商品|巴厘岛风味虾肉片90g"
+            },
+            "appHeight": 360.0,
+            "purchase": 0
+          }, {
+            "imgUrl": "https://static4.laiyifen.com/files/cms/image/1548166657989_38.jpg?iopcmd=convert&dst=jpg&Q=80",
+            "sort": "3",
+            "cssFloat": "left",
+            "appWidth": 250.0,
+            "width": "33.33%",
+            "link": {
+              "status": true,
+              "data": "https://m.laiyifen.com/detail.html?itemId=1006020801002148",
+              "appData": "lyf://productdetail?body={\"mpId\": 1006020801002148}",
+              "type": "商品|马来西亚-【亚米】提拉米苏巴旦木黑巧克力200g"
+            },
+            "appHeight": 360.0,
+            "purchase": 0
+          }]
+        },
+        "layout": 2,
+        "moduleHigh": " ",
+        "moduleWidth": 750
+      },
+      "moduleId": 1003090401000403,
+      "moduleData": null
+    }, {
+      "templateCode": "h5_multipic",
+      "dataType": 1,
+      "staticData": {
+        "images": [{
+          "oriHeight": 435,
+          "desc": "图1",
+          "link": {},
+          "src": "https://static3.laiyifen.com/files/cms/image/1548166665960_715.jpg?iopcmd=convert&dst=jpg&Q=80",
+          "url": "",
+          "oriWidth": 750
+        }],
+        "margin": 0
+      },
+      "moduleId": 1003090401000409,
+      "moduleData": null
+    }, {
+      "templateCode": "h5_multipic",
+      "dataType": 1,
+      "staticData": {
+        "images": [{
+          "oriHeight": 260,
+          "desc": "图1",
+          "link": {
+            "appUrl": "https://m.laiyifen.com/view/h5/1024084901000121.html",
+            "status": true,
+            "data": "https://m.laiyifen.com/view/h5/1024084901000121.html",
+            "appData": "https://m.laiyifen.com/view/h5/1024084901000121.html",
+            "type": "页面|年货礼盒"
+          },
+          "src": "https://static2.laiyifen.com/files/cms/image/1548064115702_5258.png",
+          "url": "https://m.laiyifen.com/view/h5/1024084901000121.html",
+          "oriWidth": 750
+        }],
+        "margin": 0
+      },
+      "moduleId": 1024090401000190,
+      "moduleData": null
+    }, {
+      "templateCode": "index_cube",
+      "dataType": 1,
+      "staticData": {
+        "cdata": {
+          "width": "100%",
+          "children": [{
+            "imgUrl": "https://static2.laiyifen.com/files/cms/image/1548064178056_7546.jpg?iopcmd=convert&dst=jpg&Q=80",
+            "sort": "1",
+            "cssFloat": "left",
+            "appWidth": 250.0,
+            "width": "33.33%",
+            "link": {
+              "status": true,
+              "data": "https://m.laiyifen.com/detail.html?itemId=1007081400000140",
+              "appData": "lyf://productdetail?body={\"mpId\": 1007081400000140}",
+              "type": "商品|福泰安康礼盒1111g"
+            },
+            "appHeight": 360.0,
+            "purchase": 0
+          }, {
+            "imgUrl": "https://static1.laiyifen.com/files/cms/image/1548064181182_1915.jpg?iopcmd=convert&dst=jpg&Q=80",
+            "sort": "2",
+            "cssFloat": "left",
+            "appWidth": 250.0,
+            "width": "33.33%",
+            "link": {
+              "status": true,
+              "data": "https://m.laiyifen.com/detail.html?itemId=1008081400000136",
+              "appData": "lyf://productdetail?body={\"mpId\": 1008081400000136}",
+              "type": "商品|鸿运当头礼盒1186g"
+            },
+            "appHeight": 360.0,
+            "purchase": 0
+          }, {
+            "imgUrl": "https://static4.laiyifen.com/files/cms/image/1548064185445_3311.jpg?iopcmd=convert&dst=jpg&Q=80",
+            "sort": "3",
+            "cssFloat": "left",
+            "appWidth": 250.0,
+            "width": "33.33%",
+            "link": {
+              "status": true,
+              "data": "https://m.laiyifen.com/detail.html?itemId=1009081400000132",
+              "appData": "lyf://productdetail?body={\"mpId\": 1009081400000132}",
+              "type": "商品|神来气旺礼盒1217g"
+            },
+            "appHeight": 360.0,
+            "purchase": 0
+          }]
+        },
+        "layout": 2,
+        "moduleHigh": " ",
+        "moduleWidth": 750
+      },
+      "moduleId": 1003090401000089,
+      "moduleData": null
+    }, {
+      "templateCode": "index_cube",
+      "dataType": 1,
+      "staticData": {
+        "cdata": {
+          "width": "100%",
+          "children": [{
+            "imgUrl": "https://static1.laiyifen.com/files/cms/image/1548064199910_4602.jpg?iopcmd=convert&dst=jpg&Q=80",
+            "sort": "1",
+            "cssFloat": "left",
+            "appWidth": 250.0,
+            "width": "33.33%",
+            "link": {
+              "status": true,
+              "data": "https://m.laiyifen.com/detail.html?itemId=1007020801011664",
+              "appData": "lyf://productdetail?body={\"mpId\": 1007020801011664}",
+              "type": "商品|优果世界风（臻爱）礼盒"
+            },
+            "appHeight": 360.0,
+            "purchase": 0
+          }, {
+            "imgUrl": "https://static4.laiyifen.com/files/cms/image/1548064211456_8566.jpg?iopcmd=convert&dst=jpg&Q=80",
+            "sort": "2",
+            "cssFloat": "left",
+            "appWidth": 250.0,
+            "width": "33.33%",
+            "link": {
+              "status": true,
+              "data": "https://m.laiyifen.com/detail.html?itemId=1009081400000130",
+              "appData": "lyf://productdetail?body={\"mpId\": 1009081400000130}",
+              "type": "商品|招财进宝礼盒1440g"
+            },
+            "appHeight": 360.0,
+            "purchase": 0
+          }, {
+            "imgUrl": "https://static4.laiyifen.com/files/cms/image/1548064217119_6085.jpg?iopcmd=convert&dst=jpg&Q=80",
+            "sort": "3",
+            "cssFloat": "left",
+            "appWidth": 250.0,
+            "width": "33.33%",
+            "link": {
+              "status": true,
+              "data": "https://m.laiyifen.com/detail.html?itemId=1006020801007780",
+              "appData": "lyf://productdetail?body={\"mpId\": 1006020801007780}",
+              "type": "商品|幸福里（金时）礼盒"
+            },
+            "appHeight": 360.0,
+            "purchase": 0
+          }]
+        },
+        "layout": 2,
+        "moduleHigh": " ",
+        "moduleWidth": 750
+      },
+      "moduleId": 1003090401000092,
+      "moduleData": null
+    }, {
+      "templateCode": "h5_multipic",
+      "dataType": 1,
+      "staticData": {
+        "images": [{
+          "oriHeight": 260,
+          "desc": "图1",
+          "link": {
+            "appUrl": "https://m.laiyifen.com/view/h5/1024077801000044.html",
+            "status": true,
+            "data": "https://m.laiyifen.com/view/h5/1024077801000044.html",
+            "appData": "https://m.laiyifen.com/view/h5/1024077801000044.html",
+            "type": "页面|亚米进口页（勿删）"
+          },
+          "src": "https://static4.laiyifen.com/files/cms/image/1548064472482_5785.png",
+          "url": "https://m.laiyifen.com/view/h5/1024077801000044.html",
+          "oriWidth": 750
+        }],
+        "margin": 0
+      },
+      "moduleId": 1003090401000095,
+      "moduleData": null
+    }, {
+      "templateCode": "index_cube",
+      "dataType": 1,
+      "staticData": {
+        "cdata": {
+          "width": "100%",
+          "children": [{
+            "imgUrl": "https://static5.laiyifen.com/files/cms/image/1548064692107_1413.png",
+            "sort": "1",
+            "cssFloat": "left",
+            "appWidth": 250.0,
+            "width": "33.33%",
+            "link": {
+              "status": true,
+              "data": "https://m.laiyifen.com/detail.html?itemId=1052059600000006",
+              "appData": "lyf://productdetail?body={\"mpId\": 1052059600000006}",
+              "type": "商品|亚米芝士夹心鳕鱼饼36g"
+            },
+            "appHeight": 360.0,
+            "purchase": 0
+          }, {
+            "imgUrl": "https://static3.laiyifen.com/files/cms/image/1548064744290_4941.png",
+            "sort": "2",
+            "cssFloat": "left",
+            "appWidth": 250.0,
+            "width": "33.33%",
+            "link": {
+              "status": true,
+              "data": "https://m.laiyifen.com/detail.html?itemId=1052035100000006",
+              "appData": "lyf://productdetail?body={\"mpId\": 1052035100000006}",
+              "type": "商品|亚米蜂蜜黄油扁桃仁35g"
+            },
+            "appHeight": 360.0,
+            "purchase": 0
+          }, {
+            "imgUrl": "https://static1.laiyifen.com/files/cms/image/1548064775092_1871.jpg?iopcmd=convert&dst=jpg&Q=80",
+            "sort": "3",
+            "cssFloat": "left",
+            "appWidth": 250.0,
+            "width": "33.33%",
+            "link": {
+              "status": true,
+              "data": "https://m.laiyifen.com/detail.html?itemId=1052042600000017",
+              "appData": "lyf://productdetail?body={\"mpId\": 1052042600000017}",
+              "type": "商品|比利时黄油薄脆饼干100g"
+            },
+            "appHeight": 360.0,
+            "purchase": 0
+          }]
+        },
+        "layout": 2,
+        "moduleHigh": " ",
+        "moduleWidth": 750
+      },
+      "moduleId": 1003090401000098,
+      "moduleData": null
+    }, {
+      "templateCode": "h5_multipic",
+      "dataType": 1,
+      "staticData": {
+        "images": [{
+          "oriHeight": 260,
+          "desc": "图1",
+          "link": {
+            "appUrl": "https://m.laiyifen.com/view/h5/1003058301000002.html",
+            "status": true,
+            "data": "https://m.laiyifen.com/view/h5/1003058301000002.html",
+            "appData": "https://m.laiyifen.com/view/h5/1003058301000002.html",
+            "type": "页面|坚果页面—瑾雯"
+          },
+          "src": "https://static2.laiyifen.com/files/cms/image/1548064820886_2643.png",
+          "url": "https://m.laiyifen.com/view/h5/1003058301000002.html",
+          "oriWidth": 750
+        }],
+        "margin": 0
+      },
+      "moduleId": 1024090401000196,
+      "moduleData": null
+    }, {
+      "templateCode": "index_cube",
+      "dataType": 1,
+      "staticData": {
+        "cdata": {
+          "width": "100%",
+          "children": [{
+            "imgUrl": "https://static3.laiyifen.com/files/cms/image/1548064836614_183.jpg?iopcmd=convert&dst=jpg&Q=80",
+            "sort": "1",
+            "cssFloat": "left",
+            "appWidth": 250.0,
+            "width": "33.33%",
+            "link": {
+              "status": true,
+              "data": "https://m.laiyifen.com/detail.html?itemId=1009077100000294",
+              "appData": "lyf://productdetail?body={\"mpId\": 1009077100000294}",
+              "type": "商品|小核桃仁118g"
+            },
+            "appHeight": 360.0,
+            "purchase": 0
+          }, {
+            "imgUrl": "https://static4.laiyifen.com/files/cms/image/1548064841285_2093.jpg?iopcmd=convert&dst=jpg&Q=80",
+            "sort": "2",
+            "cssFloat": "left",
+            "appWidth": 250.0,
+            "width": "33.33%",
+            "link": {
+              "status": true,
+              "data": "https://m.laiyifen.com/detail.html?itemId=1006020801002050",
+              "appData": "lyf://productdetail?body={\"mpId\": 1006020801002050}",
+              "type": "商品|夏威夷果192g"
+            },
+            "appHeight": 360.0,
+            "purchase": 0
+          }, {
+            "imgUrl": "https://static1.laiyifen.com/files/cms/image/1548064852072_7637.png",
+            "sort": "3",
+            "cssFloat": "left",
+            "appWidth": 250.0,
+            "width": "33.33%",
+            "link": {
+              "status": true,
+              "data": "https://m.laiyifen.com/detail.html?itemId=1008020801002578",
+              "appData": "lyf://productdetail?body={\"mpId\": 1008020801002578}",
+              "type": "商品|琥珀核桃仁200G"
+            },
+            "appHeight": 360.0,
+            "purchase": 0
+          }]
+        },
+        "layout": 2,
+        "moduleHigh": " ",
+        "moduleWidth": 750
+      },
+      "moduleId": 1024090401000199,
+      "moduleData": null
+    }, {
+      "templateCode": "h5_multipic",
+      "dataType": 1,
+      "staticData": {
+        "images": [{
+          "oriHeight": 260,
+          "desc": "图1",
+          "link": {
+            "appUrl": "https://m.laiyifen.com/view/h5/1003058401000039.html",
+            "status": true,
+            "data": "https://m.laiyifen.com/view/h5/1003058401000039.html",
+            "appData": "https://m.laiyifen.com/view/h5/1003058401000039.html",
+            "type": "页面|肉类馆"
+          },
+          "src": "https://static1.laiyifen.com/files/cms/image/1548064919073_8775.png",
+          "url": "https://m.laiyifen.com/view/h5/1003058401000039.html",
+          "oriWidth": 750
+        }],
+        "margin": 0
+      },
+      "moduleId": 1024090401000202,
+      "moduleData": null
+    }, {
+      "templateCode": "index_cube",
+      "dataType": 1,
+      "staticData": {
+        "cdata": {
+          "width": "100%",
+          "children": [{
+            "imgUrl": "https://static1.laiyifen.com/files/cms/image/1548064976291_780.png",
+            "sort": "1",
+            "cssFloat": "left",
+            "appWidth": 250.0,
+            "width": "33.33%",
+            "link": {
+              "status": true,
+              "data": "https://m.laiyifen.com/detail.html?itemId=1052029000000001",
+              "appData": "lyf://productdetail?body={\"mpId\": 1052029000000001}",
+              "type": "商品|香辣鸭肫125g"
+            },
+            "appHeight": 360.0,
+            "purchase": 0
+          }, {
+            "imgUrl": "https://static4.laiyifen.com/files/cms/image/1548064984394_3589.png",
+            "sort": "2",
+            "cssFloat": "left",
+            "appWidth": 250.0,
+            "width": "33.33%",
+            "link": {
+              "status": true,
+              "data": "https://m.laiyifen.com/detail.html?itemId=1006020801002238",
+              "appData": "lyf://productdetail?body={\"mpId\": 1006020801002238}",
+              "type": "商品|玲珑酱鸭舌108g"
+            },
+            "appHeight": 360.0,
+            "purchase": 0
+          }, {
+            "imgUrl": "https://static5.laiyifen.com/files/cms/image/1548064989472_4647.png",
+            "sort": "3",
+            "cssFloat": "left",
+            "appWidth": 250.0,
+            "width": "33.33%",
+            "link": {
+              "status": true,
+              "data": "https://m.laiyifen.com/detail.html?itemId=1006020801001306",
+              "appData": "lyf://productdetail?body={\"mpId\": 1006020801001306}",
+              "type": "商品|碳烤迷你肠250g"
+            },
+            "appHeight": 360.0,
+            "purchase": 0
+          }]
+        },
+        "layout": 2,
+        "moduleHigh": " ",
+        "moduleWidth": 750
+      },
+      "moduleId": 1003090401000101,
+      "moduleData": null
+    }, {
+      "templateCode": "h5_multipic",
+      "dataType": 1,
+      "staticData": {
+        "images": [{
+          "oriHeight": 260,
+          "desc": "图1",
+          "link": {
+            "appUrl": "https://m.laiyifen.com/view/h5/1024064601000265.html",
+            "status": true,
+            "data": "https://m.laiyifen.com/view/h5/1024064601000265.html",
+            "appData": "https://m.laiyifen.com/view/h5/1024064601000265.html",
+            "type": "页面|下午茶"
+          },
+          "src": "https://static2.laiyifen.com/files/cms/image/1548065089281_4215.png",
+          "url": "https://m.laiyifen.com/view/h5/1024064601000265.html",
+          "oriWidth": 750
+        }],
+        "margin": 0
+      },
+      "moduleId": 1003090401000104,
+      "moduleData": null
+    }, {
+      "templateCode": "index_cube",
+      "dataType": 1,
+      "staticData": {
+        "cdata": {
+          "width": "100%",
+          "children": [{
+            "imgUrl": "https://static5.laiyifen.com/files/cms/image/1548065113408_5975.png",
+            "sort": "1",
+            "cssFloat": "left",
+            "appWidth": 250.0,
+            "width": "33.33%",
+            "link": {
+              "status": true,
+              "data": "https://m.laiyifen.com/detail.html?itemId=1007020801002683",
+              "appData": "lyf://productdetail?body={\"mpId\": 1007020801002683}",
+              "type": "商品|虎皮蛋糕（奶油夹心）168g"
+            },
+            "appHeight": 360.0,
+            "purchase": 0
+          }, {
+            "imgUrl": "https://static3.laiyifen.com/files/cms/image/1548065118695_2465.png",
+            "sort": "2",
+            "cssFloat": "left",
+            "appWidth": 250.0,
+            "width": "33.33%",
+            "link": {
+              "status": true,
+              "data": "https://m.laiyifen.com/detail.html?itemId=1007047400000254",
+              "appData": "lyf://productdetail?body={\"mpId\": 1007047400000254}",
+              "type": "商品|量贩-法式可口酥（乳酪）250gX2"
+            },
+            "appHeight": 360.0,
+            "purchase": 0
+          }, {
+            "imgUrl": "https://static1.laiyifen.com/files/cms/image/1548065126359_2411.png",
+            "sort": "3",
+            "cssFloat": "left",
+            "appWidth": 250.0,
+            "width": "33.33%",
+            "link": {
+              "status": true,
+              "data": "https://m.laiyifen.com/detail.html?itemId=1008020801001458",
+              "appData": "lyf://productdetail?body={\"mpId\": 1008020801001458}",
+              "type": "商品|香脆芝士卷300g"
+            },
+            "appHeight": 360.0,
+            "purchase": 0
+          }]
+        },
+        "layout": 2,
+        "moduleHigh": " ",
+        "moduleWidth": 750
+      },
+      "moduleId": 1024090401000205,
+      "moduleData": null
+    }, {
+      "templateCode": "h5_multipic",
+      "dataType": 1,
+      "staticData": {
+        "images": [{
+          "oriHeight": 260,
+          "desc": "图1",
+          "link": {
+            "appUrl": "https://m.laiyifen.com/view/h5/1003058401000109.html",
+            "status": true,
+            "data": "https://m.laiyifen.com/view/h5/1003058401000109.html",
+            "appData": "https://m.laiyifen.com/view/h5/1003058401000109.html",
+            "type": "页面|果脯馆"
+          },
+          "src": "https://static4.laiyifen.com/files/cms/image/1548065229000_2334.png",
+          "url": "https://m.laiyifen.com/view/h5/1003058401000109.html",
+          "oriWidth": 750
+        }],
+        "margin": 0
+      },
+      "moduleId": 1003090401000107,
+      "moduleData": null
+    }, {
+      "templateCode": "index_cube",
+      "dataType": 1,
+      "staticData": {
+        "cdata": {
+          "width": "100%",
+          "children": [{
+            "imgUrl": "https://static1.laiyifen.com/files/cms/image/1548065246274_5387.png",
+            "sort": "1",
+            "cssFloat": "left",
+            "appWidth": 250.0,
+            "width": "33.33%",
+            "link": {
+              "status": true,
+              "data": "https://m.laiyifen.com/detail.html?itemId=1006020801002544",
+              "appData": "lyf://productdetail?body={\"mpId\": 1006020801002544}",
+              "type": "商品|来伊份1号金芒青芒肉108g"
+            },
+            "appHeight": 360.0,
+            "purchase": 0
+          }, {
+            "imgUrl": "https://static1.laiyifen.com/files/cms/image/1548065252279_3572.png",
+            "sort": "2",
+            "cssFloat": "left",
+            "appWidth": 250.0,
+            "width": "33.33%",
+            "link": {
+              "status": true,
+              "data": "https://m.laiyifen.com/detail.html?itemId=1008020801001920",
+              "appData": "lyf://productdetail?body={\"mpId\": 1008020801001920}",
+              "type": "商品|无花果冻干25g"
+            },
+            "appHeight": 360.0,
+            "purchase": 0
+          }, {
+            "imgUrl": "https://static5.laiyifen.com/files/cms/image/1548065259196_2152.png",
+            "sort": "3",
+            "cssFloat": "left",
+            "appWidth": 250.0,
+            "width": "33.33%",
+            "link": {
+              "status": true,
+              "data": "https://m.laiyifen.com/detail.html?itemId=1006020801005822",
+              "appData": "lyf://productdetail?body={\"mpId\": 1006020801005822}",
+              "type": "商品|盐津桃肉368g"
+            },
+            "appHeight": 360.0,
+            "purchase": 0
+          }]
+        },
+        "layout": 2,
+        "moduleHigh": " ",
+        "moduleWidth": 750
+      },
+      "moduleId": 1003090401000110,
+      "moduleData": null
+    }, {
+      "templateCode": "h5_multipic",
+      "dataType": 1,
+      "staticData": {
+        "images": [{
+          "oriHeight": 260,
+          "desc": "图1",
+          "link": {
+            "appUrl": "https://m.laiyifen.com/view/h5/1024072500000032.html",
+            "status": true,
+            "data": "https://m.laiyifen.com/view/h5/1024072500000032.html",
+            "appData": "https://m.laiyifen.com/view/h5/1024072500000032.html",
+            "type": "页面|锁鲜装"
+          },
+          "src": "https://static5.laiyifen.com/files/cms/image/1548065348127_2276.png",
+          "url": "https://m.laiyifen.com/view/h5/1024072500000032.html",
+          "oriWidth": 750
+        }],
+        "margin": 0
+      },
+      "moduleId": 1024090401000208,
+      "moduleData": null
+    }, {
+      "templateCode": "index_cube",
+      "dataType": 1,
+      "staticData": {
+        "cdata": {
+          "width": "100%",
+          "children": [{
+            "imgUrl": "https://static2.laiyifen.com/files/cms/image/1548065366981_5189.png",
+            "sort": "1",
+            "cssFloat": "left",
+            "appWidth": 250.0,
+            "width": "33.33%",
+            "link": {
+              "status": true,
+              "data": "https://m.laiyifen.com/detail.html?itemId=1006034000000004",
+              "appData": "lyf://productdetail?body={\"mpId\": 1006034000000004}",
+              "type": "商品|香辣鸭肫180g(锁鲜）"
+            },
+            "appHeight": 360.0,
+            "purchase": 0
+          }, {
+            "imgUrl": "https://static2.laiyifen.com/files/cms/image/1548065373680_1474.png",
+            "sort": "2",
+            "cssFloat": "left",
+            "appWidth": 250.0,
+            "width": "33.33%",
+            "link": {
+              "status": true,
+              "data": "https://m.laiyifen.com/detail.html?itemId=1008034600000009",
+              "appData": "lyf://productdetail?body={\"mpId\": 1008034600000009}",
+              "type": "商品|组合-香辣鸭锁骨+香辣鸭脖 380g（锁鲜）"
+            },
+            "appHeight": 360.0,
+            "purchase": 0
+          }, {
+            "imgUrl": "https://static5.laiyifen.com/files/cms/image/1548065386124_5399.png",
+            "sort": "3",
+            "cssFloat": "left",
+            "appWidth": 250.0,
+            "width": "33.33%",
+            "link": {
+              "status": true,
+              "data": "https://m.laiyifen.com/detail.html?itemId=1006031800000001",
+              "appData": "lyf://productdetail?body={\"mpId\": 1006031800000001}",
+              "type": "商品|量贩-香辣鸭锁骨180gX2（锁鲜）"
+            },
+            "appHeight": 360.0,
+            "purchase": 0
+          }]
+        },
+        "layout": 2,
+        "moduleHigh": " ",
+        "moduleWidth": 750
+      },
+      "moduleId": 1024090401000211,
+      "moduleData": null
+    }, {
+      "templateCode": "h5_multipic",
+      "dataType": 1,
+      "staticData": {
+        "images": [{
+          "oriHeight": 260,
+          "desc": "图1",
+          "link": {
+            "appUrl": "https://m.laiyifen.com/view/h5/1024064601000292.html",
+            "status": true,
+            "data": "https://m.laiyifen.com/view/h5/1024064601000292.html",
+            "appData": "https://m.laiyifen.com/view/h5/1024064601000292.html",
+            "type": "页面|减肥"
+          },
+          "src": "https://static2.laiyifen.com/files/cms/image/1548065472592_286.png",
+          "url": "https://m.laiyifen.com/view/h5/1024064601000292.html",
+          "oriWidth": 750
+        }],
+        "margin": 0
+      },
+      "moduleId": 1024090401000214,
+      "moduleData": null
+    }, {
+      "templateCode": "index_cube",
+      "dataType": 1,
+      "staticData": {
+        "cdata": {
+          "width": "100%",
+          "children": [{
+            "imgUrl": "https://static3.laiyifen.com/files/cms/image/1548065488141_3887.png",
+            "sort": "1",
+            "cssFloat": "left",
+            "appWidth": 250.0,
+            "width": "33.33%",
+            "link": {
+              "status": true,
+              "data": "https://m.laiyifen.com/detail.html?itemId=1052040900000014",
+              "appData": "lyf://productdetail?body={\"mpId\": 1052040900000014}",
+              "type": "商品|云南雪莲果9斤装（产地直发）"
+            },
+            "appHeight": 360.0,
+            "purchase": 0
+          }, {
+            "imgUrl": "https://static5.laiyifen.com/files/cms/image/1548065495424_5335.png",
+            "sort": "2",
+            "cssFloat": "left",
+            "appWidth": 250.0,
+            "width": "33.33%",
+            "link": {
+              "status": true,
+              "data": "https://m.laiyifen.com/detail.html?itemId=1085061000000038",
+              "appData": "lyf://productdetail?body={\"mpId\": 1085061000000038}",
+              "type": "商品|澳洲家庭原切牛排10片装"
+            },
+            "appHeight": 360.0,
+            "purchase": 0
+          }, {
+            "imgUrl": "https://static1.laiyifen.com/files/cms/image/1548065501205_4819.png",
+            "sort": "3",
+            "cssFloat": "left",
+            "appWidth": 250.0,
+            "width": "33.33%",
+            "link": {
+              "status": true,
+              "data": "https://m.laiyifen.com/detail.html?itemId=1007041500000003",
+              "appData": "lyf://productdetail?body={\"mpId\": 1007041500000003}",
+              "type": "商品|越南青芒5斤装"
+            },
+            "appHeight": 360.0,
+            "purchase": 0
+          }]
+        },
+        "layout": 2,
+        "moduleHigh": " ",
+        "moduleWidth": 750
+      },
+      "moduleId": 1003090401000113,
+      "moduleData": null
+    }, {
+      "templateCode": "h5_multipic",
+      "dataType": 1,
+      "staticData": {
+        "images": [{
+          "oriHeight": 260,
+          "desc": "图1",
+          "link": {
+            "appUrl": "https://m.laiyifen.com/view/h5/1024089301000031.html",
+            "status": true,
+            "data": "https://m.laiyifen.com/view/h5/1024089301000031.html",
+            "appData": "https://m.laiyifen.com/view/h5/1024089301000031.html",
+            "type": "页面|伊仔请你看电影"
+          },
+          "src": "https://static3.laiyifen.com/files/cms/image/1548065588731_7229.png",
+          "url": "https://m.laiyifen.com/view/h5/1024089301000031.html",
+          "oriWidth": 750
+        }],
+        "margin": 0
+      },
+      "moduleId": 1003090401000116,
+      "moduleData": null
+    }, {
+      "templateCode": "index_cube",
+      "dataType": 1,
+      "staticData": {
+        "cdata": {
+          "width": "100%",
+          "children": [{
+            "imgUrl": "https://static5.laiyifen.com/files/cms/image/1548065608789_7297.png",
+            "sort": "1",
+            "cssFloat": "left",
+            "appWidth": 250.0,
+            "width": "33.33%",
+            "link": {
+              "status": true,
+              "data": "https://m.laiyifen.com/detail.html?itemId=1006047100000087",
+              "appData": "lyf://productdetail?body={\"mpId\": 1006047100000087}",
+              "type": "商品|【伊仔周边】伊仔擦手巾-兔丸子粉红"
+            },
+            "appHeight": 360.0,
+            "purchase": 0
+          }, {
+            "imgUrl": "https://static2.laiyifen.com/files/cms/image/1548065613171_5571.png",
+            "sort": "2",
+            "cssFloat": "left",
+            "appWidth": 250.0,
+            "width": "33.33%",
+            "link": {
+              "status": true,
+              "data": "https://m.laiyifen.com/detail.html?itemId=1044038000000032",
+              "appData": "lyf://productdetail?body={\"mpId\": 1044038000000032}",
+              "type": "商品|【伊仔周边】伊仔毛绒挂件-笑脸"
+            },
+            "appHeight": 360.0,
+            "purchase": 0
+          }, {
+            "imgUrl": "https://static4.laiyifen.com/files/cms/image/1548065617947_5226.png",
+            "sort": "3",
+            "cssFloat": "left",
+            "appWidth": 250.0,
+            "width": "33.33%",
+            "link": {
+              "status": true,
+              "data": "https://m.laiyifen.com/detail.html?itemId=1006047100000089",
+              "appData": "lyf://productdetail?body={\"mpId\": 1006047100000089}",
+              "type": "商品|【伊仔周边】伊仔文具包-夏日"
+            },
+            "appHeight": 360.0,
+            "purchase": 0
+          }]
+        },
+        "layout": 2,
+        "moduleHigh": " ",
+        "moduleWidth": 750
+      },
+      "moduleId": 1003090401000119,
+      "moduleData": null
+    }, {
+      "templateCode": "goods",
+      "dataType": 1,
+      "staticData": {
+        "displayNav": 1,
+        "displayNum": "200",
+        "displayBuyBtn": 1,
+        "salesNum": null,
+        "useBuyConditions": true,
+        "conditionType": null,
+        "useNav": true,
+        "salesSort": null,
+        "useBuyBtn": true,
+        "goodsType": "0"
+      },
+      "moduleId": 1024090401000217,
+      "moduleData": null
+    }],
+    "pageInfo": {
+      "id": 1024090401000171,
+      "pageCode": null,
+      "pageVer": null,
+      "startDate": 1548000000000,
+      "endDate": 1863446399000,
+      "name": "让年味先回家首页",
+      "displayTitle": "让年味先回家",
+      "keywords": null,
+      "description": null,
+      "cmsThemeId": 1,
+      "status": 2,
+      "cmsThemeStyle": null,
+      "customStyle": null,
+      "createTime": 1548060219000,
+      "updateTime": 1548209229000,
+      "companyId": 30,
+      "platform": null,
+      "showSections": 1,
+      "brandId": null,
+      "merchantId": null,
+      "moduleList": null,
+      "promotionIdList": null,
+      "cmsPlatformVOList": [{
+        "objType": 1,
+        "objId": 1024090401000171,
+        "platform": 2
+      }],
+      "cmsPageSectionsHeaderVO": null,
+      "cmsPageSectionsTailVO": null,
+      "cmsPageSectionsNavigationVO": null,
+      "bgImg": "",
+      "bgRepeat": 0,
+      "bgColor": "#ffffff",
+      "cartListUrl": null,
+      "shipFeeNote": null,
+      "shareTitle": null,
+      "shareImg": null,
+      "shareDesc": null,
+      "previewUrl": null
+    }
+  },
+  "stackTrace": null,
+  "trace": "36!$1#@18%&10!$,12353,64936642476891837641599"
+}
