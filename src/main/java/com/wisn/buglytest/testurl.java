@@ -1,15 +1,53 @@
 package com.wisn.buglytest;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.regex.Pattern;
 
 public class testurl {
 
     public static void main(String[] arg) {
-        String url=" https://api.laiyifen.com/api/realTime/getPriceStockList?mpIds=1007061100000004&areaCode=310117&companyId=30&clientVersion=7.1.20&sessionId=869033028810480&ut=f6aeec192425d02cf3c835299a50409d28&platformId=0&platform=3";
+//            String reg = "(mp4|flv|avi|rm|rmvb|wmv)";
+            String reg = "^htt?:\\/\\/(.+\\/)+.+(\\.(swf|avi|flv|mpg|rm|mov|wav|asf|3gp|mkv|rmvb|mp4))";
+            String url="ht://cdn.oudianyun.com/lyf/prod/ad-whale/1594793955977_688_dghrzzGC0Z.mp4";
+            Pattern p = Pattern.compile(reg);
+            boolean boo = p.matcher( url).find();
+
+//        System.out.println(boo);
+        System.out.println(Pattern.matches(reg, url));
+
+
+//        System.out.println(Long.parseLong("#FFFFFF".substring(1), 16)) ;
+//        int a=256;
+//
+////        byte b= (byte) a;
+//        int c = get(a);
+//        System.out.println(c);
+//        System.out.println(a);
+       /* String url=" https://api.laiyifen.com/api/realTime/getPriceStockList?mpIds=1007061100000004&areaCode=310117&companyId=30&clientVersion=7.1.20&sessionId=869033028810480&ut=f6aeec192425d02cf3c835299a50409d28&platformId=0&platform=3";
 //        String url=" https://api.laiyifen.com/api/realTime/getPriceStockList";
         String url1=" https://api.laiyifen.com";
+        try {
+            URL url_=new URL(url);
+
+            System.out.println(url_.getProtocol());
+            System.out.println(url_.getFile());
+            System.out.println(url_.getPath());
+            System.out.println(url_.getHost());
+            System.out.println(url_.getPort());
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }*/
+
+    }
+    public static  int get(int a){
+        return (byte)a;
+    }
+
+    private static void test01(String url, String url1) {
         System.out.println(url.replace(url1,""));
         String s = UrlPage(url);
         System.out.println(s);
@@ -20,7 +58,6 @@ public class testurl {
             Map.Entry<String, String> next = iterator.next();
             System.out.println("key:"+next.getKey()+" value:"+next.getKey());
         }
-
     }
 
     /**
